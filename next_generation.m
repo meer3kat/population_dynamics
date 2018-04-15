@@ -1,6 +1,8 @@
 function y = next_generation(x,n,b)
+%% this function gets the next_generation column vector 
 %x is the current population vector at each location 
 %n is the number of locations
+%b is the number of offspring per 2 individual
 
 y = zeros(n,1); % initialize our next generation vector
 
