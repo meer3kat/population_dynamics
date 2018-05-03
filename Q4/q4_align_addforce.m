@@ -1,6 +1,3 @@
-% Self-propelled particle model of aggregation in two dimensions.
-% Written by Kit Yates
-
 clear
 close all
 
@@ -9,23 +6,29 @@ fig=figure;
 makemovie=1;
 %movien = avifile('Vicsekmovie','FPS',3,'compression','none')
 
-J=1000; %Number of timestep t0 be used
-UJ=1;   %Rate at which film is updated
+J=200; 
+%Number of timestep t0 be used
+
+UJ=1;   
+%Rate at which film is updated
 
 
-t=1/J %Size of one time step
+t=1/J; %Size of one time step
 
-N=60 %Number of particles
+N=40; 
+%Number of particles
 
-e=0.5 %e is eta the noise parameter, whose maximum value is 2*pi
+e=0.5; 
+%e is eta the noise parameter, whose maximum value is 2*pi
 
-r=1
+r=1;
 
 %The radius of influence of a particle
 
-L=20 %L is the size of the domain on which the particles can move
+L=10;
+%L is the size of the domain on which the particles can move
 
-v=0.5 %v is the speed at which the particles move
+v=0.5; %v is the speed at which the particles move
 
 % x(i,j) gives the x coordinate of the ith particle at time j
 x=zeros(N,J+1);
@@ -39,30 +42,34 @@ y(:,1)=L*rand(N,1); %define initial y coordiantes of all particles
 % particle at time j
 T=zeros(N,J+1);
 T(:,1)=2*pi*rand(N,1); %define initial direction of all particles
-     
+k = 4;
 %For all time steps
-for j=1:J
+for j=1:1:J %iterate in time
     %For each particle
-    for i=1:N
-            %finds how many particles are in the interaction radius of each
-            %particle
-            %
-            A(:,1)=((x(i,j)-x(:,j)).^2+(y(i,j)-y(:,j)).^2).^0.5<=r;
-            A(:,2)=((x(i,j)-x(:,j)-L).^2+(y(i,j)-y(:,j)).^2).^0.5<=r;
-            A(:,3)=((x(i,j)-x(:,j)).^2+(y(i,j)-y(:,j)-L).^2).^0.5<=r;
-            A(:,4)=((x(i,j)-x(:,j)+L).^2+(y(i,j)-y(:,j)).^2).^0.5<=r;
-            A(:,5)=((x(i,j)-x(:,j)).^2+(y(i,j)-y(:,j)+L).^2).^0.5<=r;
-            A(:,6)=((x(i,j)-x(:,j)+L).^2+(y(i,j)-y(:,j)+L).^2).^0.5<=r;
-            A(:,7)=((x(i,j)-x(:,j)+L).^2+(y(i,j)-y(:,j)-L).^2).^0.5<=r;
-            A(:,8)=((x(i,j)-x(:,j)-L).^2+(y(i,j)-y(:,j)+L).^2).^0.5<=r;
-            A(:,9)=((x(i,j)-x(:,j)-L).^2+(y(i,j)-y(:,j)-L).^2).^0.5<=r;
+    D = distance(x,y,j,N);
+    [B,I] = sort(D);
+    near_n = I(2:k+1,:); %found our nearest 4 neighbours for each one
+    xc = mean(x(:,j)); %center of mass x
+    yc = mean(y(:,j)); %center of mass y
+    
+    for i=1:1:N
+        
+            %get the current distance vector  
+            neighbour = near_n(:,i);
+            tn = []; % the neighbour direction
+            for m = 1:1:length(neighbour)
+                tn(m) = T(neighbour(m),j);
+            end
+            
+            fcenter = atan2(yc-y(i,j),xc-x(i,j));
+            %location of center
+            ss = sum(sin(tn)) + sin(fcenter)*0.1;
+            sc = sum(cos(tn)) + cos(fcenter)*0.1;
+            
+            S = atan2(ss,sc);
             
             
-            B=sum(A')';         
-            ss=sum(sin(T(:,j)).*B)/sum(B);
-            sc=sum(cos(T(:,j)).*B)/sum(B);
-            S=atan2(ss,sc);
-                   
+                              
             T(i,j+1)=S+e*(rand-0.5); %adds noise to the measured angle
 
             x(i,j+1)=x(i,j)+v*cos(T(i,j+1)); %updates the particles' x-coordinates
