@@ -19,3 +19,5 @@ histu = hist(dir,range);
 bar(histu)
 
 k = (1/(n*n))*sum(dir);
+
+save('try1')
