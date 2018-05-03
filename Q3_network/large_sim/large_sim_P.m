@@ -15,7 +15,7 @@ for st = 1:1:sim_t
     j = 0;
     
     for pe = ps
-        j = j+1
+        j = j+1;
         infected_start = randperm(n,100); % the infected ones
         infected_vector = zeros(n,1);%initial a state vector
         for i = 1:1:length(infected_start)
