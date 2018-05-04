@@ -4,7 +4,7 @@ clear all
 Bvals = 1:1:50;
 
 n = 1000; % number of resource sites 
-x0 = 1000; %initial population number
+x0 = 100; %initial population number
 t = 200;%simulate to t = 200
 count = 0;
 reps = 100;
@@ -38,4 +38,4 @@ title('population simulation phase transition', 'FontSize', 16)
 title(sprintf('population simulation phase transition numreps = %s for each b', string(reps)),'FontSize',16)
 
 
-saveas(figure2,'q1_phase_r100.png');
+saveas(figure2,'q1_smallp.png');

@@ -4,7 +4,7 @@ clear all
 
 n = 1000; % number of resource sites 
 %first, lets get initial condition
-x0 = 1000; %population number
+x0 = 100; %population number
 
 %{
 for k = 1:1:30
@@ -41,4 +41,4 @@ hlx=xlabel('b','FontSize',14)
 hlx=ylabel('total population?','FontSize',14)
 title('Phase transition plot', 'FontSize', 16)
 colorbar
-saveas(figure2,'phasetransition1.png');
+saveas(figure2,'small_population.png');

@@ -1,8 +1,12 @@
 clear all;
-
+%need to compute average? 
 n = 1000; % number of resource sites 
 x0 = 1000; %initial population number
-t = 500;%simulate to t = 200
+t = 500;%simulate to t = 500
+
+% if lamda < 0 ,it converge
+% if lamda > 0 ,it diverge
+
 
 
 for b = 1:1:50
@@ -21,4 +25,4 @@ for b = 1:1:50
     lya_exp(b) = (1/t)* sum(lamda);
 end
 
-%plot
+plot(lya_exp)

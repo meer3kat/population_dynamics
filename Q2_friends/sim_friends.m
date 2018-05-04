@@ -4,8 +4,8 @@ N = 100; % initial number of individuals
 
 G = ones(1,N);
 
-r = 0.1;
-ft = 2000;%final time step
+r = 0.01;
+ft = 1000;%final time step
 hrange = 1:1:100; %for histogram
 result = [];
 
