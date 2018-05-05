@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.4.6)  3 MAY 2018 22:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.4.6)  5 MAY 2018 14:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -675,26 +675,33 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grffile.sty
+Package: grffile 2016/05/16 v1.17 Extended file name support for graphics (HO)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (./project2_report.aux)
 \openout1 = `project2_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -765,7 +772,7 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 43.
+Package hyperref Info: Link coloring OFF on input line 44.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -774,9 +781,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count155
 )
-LaTeX Info: Redefining \ref on input line 43.
-LaTeX Info: Redefining \pageref on input line 43.
-LaTeX Info: Redefining \nameref on input line 43.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
 
 (./project2_report.out) (./project2_report.out)
 \@outlinefile=\write4
@@ -791,435 +798,321 @@ Package epstopdf Info: Source file: <UU_logo.eps>
 (epstopdf)                    size: 53914 bytes
 (epstopdf)             Command: <repstopdf --outfile=UU_logo-eps-converted-to.p
 df UU_logo.eps>
-(epstopdf)             \includegraphics on input line 62.
+(epstopdf)             \includegraphics on input line 63.
 Package epstopdf Info: Output file is already uptodate.
 
-<UU_logo-eps-converted-to.pdf, id=67, 239.89626pt x 239.89626pt>
+<UU_logo-eps-converted-to.pdf, id=71, 239.89626pt x 239.89626pt>
 File: UU_logo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use UU_logo-eps-converted-to.pdf>
-Package pdftex.def Info: UU_logo-eps-converted-to.pdf used on input line 62.
+Package pdftex.def Info: UU_logo-eps-converted-to.pdf used on input line 63.
 (pdftex.def)             Requested size: 239.89566pt x 239.89566pt.
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./UU_lo
 go-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 115.
+LaTeX Font Info:    Try loading font information for U+msa on input line 110.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 115.
+LaTeX Font Info:    Try loading font information for U+msb on input line 110.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+)
+<single_run n1000 x010 b50.png, id=84, 702.4644pt x 502.0356pt>
+File: single_run n1000 x010 b50.png Graphic file (type png)
+
+<use single_run n1000 x010 b50.png>
+Package pdftex.def Info: single_run n1000 x010 b50.png used on input line 130.
+(pdftex.def)             Requested size: 341.44514pt x 256.07307pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.126 
-       [1]
+l.134 
+       [1] <single_run n1000 x050 b30.png, id=94, 702.4644pt x 502.0356pt>
+File: single_run n1000 x050 b30.png Graphic file (type png)
 
-LaTeX Warning: File `fire10.png' not found on input line 130.
+<use single_run n1000 x050 b30.png>
+Package pdftex.def Info: single_run n1000 x050 b30.png used on input line 137.
+(pdftex.def)             Requested size: 341.44514pt x 256.07307pt.
+
+<single_run n1000 x050 b50.png, id=95, 702.4644pt x 502.0356pt>
+File: single_run n1000 x050 b50.png Graphic file (type png)
+
+<use single_run n1000 x050 b50.png>
+Package pdftex.def Info: single_run n1000 x050 b50.png used on input line 144.
+(pdftex.def)             Requested size: 341.44514pt x 256.07307pt.
+ [2 <./single_run n1000 x010 b50.png (PNG copy)> <./single_run n1000 x050 b30.p
+ng (PNG copy)>]
+<single_run n1000 x0100 b20.png, id=102, 702.4644pt x 502.0356pt>
+File: single_run n1000 x0100 b20.png Graphic file (type png)
+
+<use single_run n1000 x0100 b20.png>
+Package pdftex.def Info: single_run n1000 x0100 b20.png used on input line 151.
+
+(pdftex.def)             Requested size: 341.44514pt x 256.07307pt.
+
+<single_run n1000 x0100 b50.png, id=103, 702.4644pt x 502.0356pt>
+File: single_run n1000 x0100 b50.png Graphic file (type png)
+
+<use single_run n1000 x0100 b50.png>
+Package pdftex.def Info: single_run n1000 x0100 b50.png used on input line 158.
+
+(pdftex.def)             Requested size: 341.44514pt x 256.07307pt.
+ [3 <./single_run n1000 x050 b50.png (PNG copy)> <./single_run n1000 x0100 b20.
+png (PNG copy)>]
+<single_run n1000 x01000 b10.png, id=110, 702.4644pt x 502.0356pt>
+File: single_run n1000 x01000 b10.png Graphic file (type png)
+
+<use single_run n1000 x01000 b10.png>
+Package pdftex.def Info: single_run n1000 x01000 b10.png used on input line 166
+.
+(pdftex.def)             Requested size: 341.44514pt x 256.07307pt.
+
+<single_run n1000 x01000 b20.png, id=111, 702.4644pt x 502.0356pt>
+File: single_run n1000 x01000 b20.png Graphic file (type png)
+
+<use single_run n1000 x01000 b20.png>
+Package pdftex.def Info: single_run n1000 x01000 b20.png used on input line 173
+.
+(pdftex.def)             Requested size: 341.44514pt x 256.07307pt.
+ [4 <./single_run n1000 x0100 b50.png (PNG copy)> <./single_run n1000 x01000 b1
+0.png (PNG copy)>]
+<single_run n1000 x01000 b50.png, id=118, 702.4644pt x 502.0356pt>
+File: single_run n1000 x01000 b50.png Graphic file (type png)
+
+<use single_run n1000 x01000 b50.png>
+Package pdftex.def Info: single_run n1000 x01000 b50.png used on input line 181
+.
+(pdftex.def)             Requested size: 341.44514pt x 256.07307pt.
+ [5 <./single_run n1000 x01000 b20.png (PNG copy)> <./single_run n1000 x01000 b
+50.png (PNG copy)>]
+
+LaTeX Warning: File `fire10.png' not found on input line 207.
 
 
-./project2_report.tex:130: Package pdftex.def Error: File `fire10.png' not foun
+./project2_report.tex:207: Package pdftex.def Error: File `fire10.png' not foun
 d.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130 ...[width = 12 cm, height = 9cm]{fire10.png}
+l.207 ...[width = 12 cm, height = 9cm]{fire10.png}
                                                   
 ? 
+[6]
 
-LaTeX Warning: File `fire20.png' not found on input line 137.
+LaTeX Warning: File `fire20.png' not found on input line 214.
 
 
-./project2_report.tex:137: Package pdftex.def Error: File `fire20.png' not foun
+./project2_report.tex:214: Package pdftex.def Error: File `fire20.png' not foun
 d.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137 ...[width = 12 cm, height = 9cm]{fire20.png}
+l.214 ...[width = 12 cm, height = 9cm]{fire20.png}
                                                   
 ? 
-[2]
 
-LaTeX Warning: File `fire100.png' not found on input line 144.
+LaTeX Warning: File `fire100.png' not found on input line 221.
 
 
-./project2_report.tex:144: Package pdftex.def Error: File `fire100.png' not fou
+./project2_report.tex:221: Package pdftex.def Error: File `fire100.png' not fou
 nd.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.144 ...width = 12 cm, height = 9cm]{fire100.png}
+l.221 ...width = 12 cm, height = 9cm]{fire100.png}
                                                   
 ? 
+[7]
 
-LaTeX Warning: File `fire1000.png' not found on input line 151.
+LaTeX Warning: File `fire1000.png' not found on input line 228.
 
 
-./project2_report.tex:151: Package pdftex.def Error: File `fire1000.png' not fo
+./project2_report.tex:228: Package pdftex.def Error: File `fire1000.png' not fo
 und.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.151 ...idth = 12 cm, height = 9cm]{fire1000.png}
+l.228 ...idth = 12 cm, height = 9cm]{fire1000.png}
                                                   
 ? 
-[3]
 
-LaTeX Warning: File `firebrain100sim.png' not found on input line 158.
+LaTeX Warning: File `firebrain100sim.png' not found on input line 235.
 
 
-./project2_report.tex:158: Package pdftex.def Error: File `firebrain100sim.png'
+./project2_report.tex:235: Package pdftex.def Error: File `firebrain100sim.png'
  not found.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.158 ...12 cm, height = 9cm]{firebrain100sim.png}
+l.235 ...12 cm, height = 9cm]{firebrain100sim.png}
                                                   
 ? 
+[8]
 
-LaTeX Warning: File `sim_model.png' not found on input line 165.
+LaTeX Warning: File `sim_model.png' not found on input line 242.
 
 
-./project2_report.tex:165: Package pdftex.def Error: File `sim_model.png' not f
+./project2_report.tex:242: Package pdftex.def Error: File `sim_model.png' not f
 ound.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.165 ...dth = 12 cm, height = 9cm]{sim_model.png}
+l.242 ...dth = 12 cm, height = 9cm]{sim_model.png}
                                                   
 ? 
-[4]
+[9]
 
-LaTeX Warning: File `task2_1.png' not found on input line 186.
+LaTeX Warning: File `task2_1.png' not found on input line 263.
 
 
-./project2_report.tex:186: Package pdftex.def Error: File `task2_1.png' not fou
+./project2_report.tex:263: Package pdftex.def Error: File `task2_1.png' not fou
 nd.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.186 ...idth = 16 cm, height = 13cm]{task2_1.png}
+l.263 ...idth = 16 cm, height = 13cm]{task2_1.png}
                                                   
 ? 
 
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 186--187
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 263--264
  [][] 
  []
 
-[5]
+[10]
 
-LaTeX Warning: File `task2_2.png' not found on input line 194.
+LaTeX Warning: File `task2_2.png' not found on input line 271.
 
 
-./project2_report.tex:194: Package pdftex.def Error: File `task2_2.png' not fou
+./project2_report.tex:271: Package pdftex.def Error: File `task2_2.png' not fou
 nd.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.194 ...idth = 16 cm, height = 13cm]{task2_2.png}
+l.271 ...idth = 16 cm, height = 13cm]{task2_2.png}
                                                   
 ? 
 
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 194--195
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 271--272
  [][] 
  []
 
-[6]
+[11]
 
-LaTeX Warning: File `task2_3.png' not found on input line 202.
+LaTeX Warning: File `task2_3.png' not found on input line 279.
 
 
-./project2_report.tex:202: Package pdftex.def Error: File `task2_3.png' not fou
+./project2_report.tex:279: Package pdftex.def Error: File `task2_3.png' not fou
 nd.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 ...idth = 16 cm, height = 13cm]{task2_3.png}
+l.279 ...idth = 16 cm, height = 13cm]{task2_3.png}
                                                   
 ? 
 
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 202--203
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 279--280
  [][] 
  []
 
-[7]
+[12]
 
-LaTeX Warning: File `task2_4.png' not found on input line 210.
+LaTeX Warning: File `task2_4.png' not found on input line 287.
 
 
-./project2_report.tex:210: Package pdftex.def Error: File `task2_4.png' not fou
+./project2_report.tex:287: Package pdftex.def Error: File `task2_4.png' not fou
 nd.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.210 ...idth = 16 cm, height = 13cm]{task2_4.png}
+l.287 ...idth = 16 cm, height = 13cm]{task2_4.png}
                                                   
 ? 
 
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 210--211
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 287--288
  [][] 
  []
 
-[8]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 221.
+[13]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 298.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 221.
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 298.
+ [14]
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
- []
-
-[10]
-
-LaTeX Warning: File `mycell_automata.png' not found on input line 250.
-
-
-./project2_report.tex:250: Package pdftex.def Error: File `mycell_automata.png'
- not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250 ...12 cm, height = 9cm]{mycell_automata.png}
-                                                  
-? 
-[11]
-
-LaTeX Warning: File `memes_sim_1000times.png' not found on input line 285.
-
-
-./project2_report.tex:285: Package pdftex.def Error: File `memes_sim_1000times.
-png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.285 ...m, height = 9cm]{memes_sim_1000times.png}
-                                                  
-? 
-[12]
-
-LaTeX Warning: File `memes_withmodel1000.png' not found on input line 301.
-
-
-./project2_report.tex:301: Package pdftex.def Error: File `memes_withmodel1000.
-png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.301 ..., height = 13cm]{memes_withmodel1000.png}
-                                                  
-? 
-
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 301--302
- [][] 
- []
-
-[13]
-
-LaTeX Warning: File `phasetransition.png' not found on input line 308.
-
-
-./project2_report.tex:308: Package pdftex.def Error: File `phasetransition.png'
- not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.308 ...6 cm, height = 13cm]{phasetransition.png}
-                                                  
-? 
-
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 308--309
- [][] 
- []
-
-[14]
-
-LaTeX Warning: File `indi_phase.png' not found on input line 315.
-
-
-./project2_report.tex:315: Package pdftex.def Error: File `indi_phase.png' not 
-found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.315 ...h = 16 cm, height = 13cm]{indi_phase.png}
-                                                  
-? 
-
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 315--316
- [][] 
  []
 
 [15]
 
-LaTeX Warning: File `probability250_100sim.png' not found on input line 324.
+LaTeX Warning: File `mycell_automata.png' not found on input line 327.
 
 
-./project2_report.tex:324: Package pdftex.def Error: File `probability250_100si
-m.png' not found.
+./project2_report.tex:327: Package pdftex.def Error: File `mycell_automata.png'
+ not found.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.324 ...height = 13cm]{probability250_100sim.png}
+l.327 ...12 cm, height = 9cm]{mycell_automata.png}
                                                   
 ? 
+[16]
 
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 324--325
- [][] 
- []
-
-[16] [17]
-
-LaTeX Warning: File `memes2_sim_1000times.png' not found on input line 339.
+LaTeX Warning: File `memes_sim_1000times.png' not found on input line 362.
 
 
-./project2_report.tex:339: Package pdftex.def Error: File `memes2_sim_1000times
-.png' not found.
+./project2_report.tex:362: Package pdftex.def Error: File `memes_sim_1000times.
+png' not found.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.339 ... height = 13cm]{memes2_sim_1000times.png}
+l.362 ...m, height = 9cm]{memes_sim_1000times.png}
                                                   
 ? 
+[17]
 
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 339--340
- [][] 
- []
-
-[18]
-
-LaTeX Warning: File `memes2_withmodel1000.png' not found on input line 346.
+LaTeX Warning: File `memes_withmodel1000.png' not found on input line 378.
 
 
-./project2_report.tex:346: Package pdftex.def Error: File `memes2_withmodel1000
-.png' not found.
+./project2_report.tex:378: Package pdftex.def Error: File `memes_withmodel1000.
+png' not found.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.346 ... height = 13cm]{memes2_withmodel1000.png}
-                                                  
-? 
-
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 346--347
- [][] 
- []
-
-[19]
-
-LaTeX Warning: File `phasetransition2.png' not found on input line 354.
-
-
-./project2_report.tex:354: Package pdftex.def Error: File `phasetransition2.png
-' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.354 ... cm, height = 13cm]{phasetransition2.png}
-                                                  
-? 
-
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 354--355
- [][] 
- []
-
-[20]
-
-LaTeX Warning: File `indi_phase2t1000withq.png' not found on input line 361.
-
-
-./project2_report.tex:361: Package pdftex.def Error: File `indi_phase2t1000with
-q.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 ...height = 13cm]{indi_phase2t1000withq.png}
-                                                  
-? 
-
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 361--362
- [][] 
- []
-
-[21] [22]
-
-LaTeX Warning: File `memegrid.png' not found on input line 371.
-
-
-./project2_report.tex:371: Package pdftex.def Error: File `memegrid.png' not fo
-und.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.371 ...dth = 16 cm, height = 13cm]{memegrid.png}
-                                                  
-? 
-
-Overfull \hbox (25.36488pt too wide) in paragraph at lines 371--372
- [][] 
- []
-
-
-LaTeX Warning: File `memegrid100.png' not found on input line 378.
-
-
-./project2_report.tex:378: Package pdftex.def Error: File `memegrid100.png' not
- found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.378 ... = 16 cm, height = 13cm]{memegrid100.png}
+l.378 ..., height = 13cm]{memes_withmodel1000.png}
                                                   
 ? 
 
@@ -1227,7 +1120,186 @@ Overfull \hbox (25.36488pt too wide) in paragraph at lines 378--379
  [][] 
  []
 
-[23] [24]
+[18]
+
+LaTeX Warning: File `phasetransition.png' not found on input line 385.
+
+
+./project2_report.tex:385: Package pdftex.def Error: File `phasetransition.png'
+ not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.385 ...6 cm, height = 13cm]{phasetransition.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 385--386
+ [][] 
+ []
+
+[19]
+
+LaTeX Warning: File `indi_phase.png' not found on input line 392.
+
+
+./project2_report.tex:392: Package pdftex.def Error: File `indi_phase.png' not 
+found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.392 ...h = 16 cm, height = 13cm]{indi_phase.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 392--393
+ [][] 
+ []
+
+[20]
+
+LaTeX Warning: File `probability250_100sim.png' not found on input line 401.
+
+
+./project2_report.tex:401: Package pdftex.def Error: File `probability250_100si
+m.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.401 ...height = 13cm]{probability250_100sim.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 401--402
+ [][] 
+ []
+
+[21] [22]
+
+LaTeX Warning: File `memes2_sim_1000times.png' not found on input line 416.
+
+
+./project2_report.tex:416: Package pdftex.def Error: File `memes2_sim_1000times
+.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.416 ... height = 13cm]{memes2_sim_1000times.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 416--417
+ [][] 
+ []
+
+[23]
+
+LaTeX Warning: File `memes2_withmodel1000.png' not found on input line 423.
+
+
+./project2_report.tex:423: Package pdftex.def Error: File `memes2_withmodel1000
+.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ... height = 13cm]{memes2_withmodel1000.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 423--424
+ [][] 
+ []
+
+[24]
+
+LaTeX Warning: File `phasetransition2.png' not found on input line 431.
+
+
+./project2_report.tex:431: Package pdftex.def Error: File `phasetransition2.png
+' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ... cm, height = 13cm]{phasetransition2.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 431--432
+ [][] 
+ []
+
+[25]
+
+LaTeX Warning: File `indi_phase2t1000withq.png' not found on input line 438.
+
+
+./project2_report.tex:438: Package pdftex.def Error: File `indi_phase2t1000with
+q.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.438 ...height = 13cm]{indi_phase2t1000withq.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 438--439
+ [][] 
+ []
+
+[26] [27]
+
+LaTeX Warning: File `memegrid.png' not found on input line 448.
+
+
+./project2_report.tex:448: Package pdftex.def Error: File `memegrid.png' not fo
+und.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.448 ...dth = 16 cm, height = 13cm]{memegrid.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 448--449
+ [][] 
+ []
+
+
+LaTeX Warning: File `memegrid100.png' not found on input line 455.
+
+
+./project2_report.tex:455: Package pdftex.def Error: File `memegrid100.png' not
+ found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.455 ... = 16 cm, height = 13cm]{memegrid100.png}
+                                                  
+? 
+
+Overfull \hbox (25.36488pt too wide) in paragraph at lines 455--456
+ [][] 
+ []
+
+[28] [29]
 
 ! Package Listings Error: File `firebrain1(.m)' not found.
 
@@ -1235,10 +1307,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:396: Undefined control sequence.
+./project2_report.tex:473: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.396 \lstinputlisting{firebrain1.m}
+l.473 \lstinputlisting{firebrain1.m}
                                     
 ? 
 
@@ -1248,10 +1320,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:400: Undefined control sequence.
+./project2_report.tex:477: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.400 \lstinputlisting{transit.m}
+l.477 \lstinputlisting{transit.m}
                                  
 ? 
 
@@ -1261,10 +1333,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:404: Undefined control sequence.
+./project2_report.tex:481: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.404 \lstinputlisting{random_start.m}
+l.481 \lstinputlisting{random_start.m}
                                       
 ? 
 
@@ -1274,10 +1346,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:408: Undefined control sequence.
+./project2_report.tex:485: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.408 \lstinputlisting{firebrain1_simulate100.m}
+l.485 \lstinputlisting{firebrain1_simulate100.m}
                                                 
 ? 
 
@@ -1287,10 +1359,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:412: Undefined control sequence.
+./project2_report.tex:489: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.412 \lstinputlisting{task2_1.m}
+l.489 \lstinputlisting{task2_1.m}
                                  
 ? 
 
@@ -1300,10 +1372,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:416: Undefined control sequence.
+./project2_report.tex:493: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.416 \lstinputlisting{task2_2a.m}
+l.493 \lstinputlisting{task2_2a.m}
                                   
 ? 
 
@@ -1313,10 +1385,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:420: Undefined control sequence.
+./project2_report.tex:497: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.420 \lstinputlisting{task2_3.m}
+l.497 \lstinputlisting{task2_3.m}
                                  
 ? 
 
@@ -1326,10 +1398,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:424: Undefined control sequence.
+./project2_report.tex:501: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.424 \lstinputlisting{task2_4.m}
+l.501 \lstinputlisting{task2_4.m}
                                  
 ? 
 
@@ -1339,10 +1411,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:429: Undefined control sequence.
+./project2_report.tex:506: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.429 \lstinputlisting{reproduceown.m}
+l.506 \lstinputlisting{reproduceown.m}
                                       
 ? 
 
@@ -1352,10 +1424,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:433: Undefined control sequence.
+./project2_report.tex:510: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.433 \lstinputlisting{transitown.m}
+l.510 \lstinputlisting{transitown.m}
                                     
 ? 
 
@@ -1365,13 +1437,13 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:447: Undefined control sequence.
+./project2_report.tex:524: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.447 \lstinputlisting{sim_meme1.m}
+l.524 \lstinputlisting{sim_meme1.m}
                                    
 ? 
-[25]
+[30]
 
 ! Package Listings Error: File `runmeme(.m)' not found.
 
@@ -1379,10 +1451,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:451: Undefined control sequence.
+./project2_report.tex:528: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.451 \lstinputlisting{runmeme.m}
+l.528 \lstinputlisting{runmeme.m}
                                  
 ? 
 
@@ -1392,10 +1464,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:455: Undefined control sequence.
+./project2_report.tex:532: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.455 \lstinputlisting{sim_meme_model.m}
+l.532 \lstinputlisting{sim_meme_model.m}
                                         
 ? 
 
@@ -1405,10 +1477,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:459: Undefined control sequence.
+./project2_report.tex:536: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.459 \lstinputlisting{sim_meme_phase.m}
+l.536 \lstinputlisting{sim_meme_phase.m}
                                         
 ? 
 
@@ -1418,10 +1490,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:464: Undefined control sequence.
+./project2_report.tex:541: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.464 \lstinputlisting{plargethan250.m}
+l.541 \lstinputlisting{plargethan250.m}
                                        
 ? 
 
@@ -1431,10 +1503,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:469: Undefined control sequence.
+./project2_report.tex:546: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.469 \lstinputlisting{sim_meme2.m}
+l.546 \lstinputlisting{sim_meme2.m}
                                    
 ? 
 
@@ -1444,10 +1516,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:473: Undefined control sequence.
+./project2_report.tex:550: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.473 \lstinputlisting{runmeme_newbored.m}
+l.550 \lstinputlisting{runmeme_newbored.m}
                                           
 ? 
 
@@ -1457,10 +1529,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:477: Undefined control sequence.
+./project2_report.tex:554: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.477 \lstinputlisting{sim_meme_model2.m}
+l.554 \lstinputlisting{sim_meme_model2.m}
                                          
 ? 
 
@@ -1470,10 +1542,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:481: Undefined control sequence.
+./project2_report.tex:558: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.481 \lstinputlisting{sim_meme_phase2.m}
+l.558 \lstinputlisting{sim_meme_phase2.m}
                                          
 ? 
 
@@ -1483,10 +1555,10 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:485: Undefined control sequence.
+./project2_report.tex:562: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.485 \lstinputlisting{memegrid.m}
+l.562 \lstinputlisting{memegrid.m}
                                   
 ? 
 
@@ -1496,27 +1568,31 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: m)
 
 Enter file name: 
-./project2_report.tex:489: Undefined control sequence.
+./project2_report.tex:566: Undefined control sequence.
 \\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
                                                   \@newlistfalse \ignorespaces 
-l.489 \lstinputlisting{transit_meme.m}
+l.566 \lstinputlisting{transit_meme.m}
                                       
 ? 
-[26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 496.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 496.
+[31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 573.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 573.
  (./project2_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 496.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 496.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 573.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 573.
 Package rerunfilecheck Info: File `project2_report.out' has not changed.
-(rerunfilecheck)             Checksum: 27CEE16FD370CD8ACA67DE2A0E2CCB88;1316.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 496.
+(rerunfilecheck)             Checksum: 058B23BA7FF81147ADDBD406160E0406;1383.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 573.
  ) 
 Here is how much of TeX's memory you used:
- 19237 strings out of 492995
- 350399 string characters out of 6132705
- 472378 words of memory out of 5000000
- 22316 multiletter control sequences out of 15000+600000
+ 19334 strings out of 492995
+ 352818 string characters out of 6132705
+ 473800 words of memory out of 5000000
+ 22416 multiletter control sequences out of 15000+600000
  11180 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,7n,72p,1185b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1526,12 +1602,13 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on project2_report.pdf (27 pages, 167531 bytes).
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on project2_report.pdf (32 pages, 491989 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 232 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

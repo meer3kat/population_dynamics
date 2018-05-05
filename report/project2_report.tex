@@ -21,6 +21,7 @@
 \usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
 \definecolor{mylilas}{RGB}{170,55,241}
+\usepackage{grffile} %to avoid showing the file names of figures
 
 \lstset{language=Matlab,%
     %basicstyle=\color{red},
@@ -61,7 +62,7 @@
 
 \includegraphics{UU_logo.eps}\\[0.5cm] % Include a department/university logo - this will require the graphicx package
  
-\textsc{\Large Modelling complex systems}\\[0.5cm] % Major heading such as course name
+\textsc{\huge Modelling complex systems}\\[0.5cm] % Major heading such as course name
 
 
 %----------------------------------------------------------------------------------------
@@ -101,21 +102,107 @@
 \newpage
 %%%%%%%%%%%%
 %%%start report 
-%%%1. fire brain
+%%%1. population dynamics
 %%%%%%%%%%%
 
-\section{Population Dynamics
+\section{Population Dynamics}
 \doublespacing
-In this part, a simple program in matlab was written to simulate a firing brain with two-dimensional cellular automata model on a N by N grid with periodic boundary conditions.\par
+In this part, we model the population with a stochastic model. There are n resource sites in the model world, and at time t =0, the population is $A_{0}$ and they are assigned randomly to one resource site. At each t step, the population rules are, if there are exactly two individuals on the same site. They reproduce b offsprings and these offsprings are assigned randomly to resources sites. If the number of individuals on a resources sites is any number other than 2, no offspring will be reproduced. 
+
+\subsection{Matlab model}
+
+To begin, we can run this with different parameters and simulate in Matlab and observe the total number of population at different time step. The different parameters are: 
+
+\begin{enumerate}
+\item b: number of offspring if reproduce
+\item n: total of number of resource sites
+\item $A_{0}$: initial population
+\item t: the time steps we want to simulate the model
+\end{enumerate}
+
+
+When set the initial population to a small number relative to the resource site, it would be difficult to have 2 individuals at the same site for reproduce, and even if they reproduce a large number of offspring the population dies out very quick. 
+below are some plots showing the total number of population at different time steps with different parameters. 
+
+\begin{figure}[H] %figure 1 at x0=10 b= 50
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{single_run n1000 x010 b50.png}
+\caption{initial population of 10 b = 50 not reproducing}
+\label{fig:p1s1}
+\end{figure}
+
+\begin{figure}[H] %figure 2 x0 = 50 b =30 
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{single_run n1000 x050 b30.png}
+\caption{initial population of 50 and b =30 not reproducing}
+\label{fig:p1s2}
+\end{figure}
+
+\begin{figure}[H] %figure3 x0 = 50 b= 50
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{single_run n1000 x050 b50.png}
+\caption{initial population of 50 and b = 50, in the beginning reproduce but quickly dies}
+\label{fig:p1s3}
+\end{figure}
+
+\begin{figure}[H] %figure4 x0 = 100 b = 20
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{single_run n1000 x0100 b20.png}
+\caption{initial population of 100 and b = 20, it dies}
+\label{fig:p1s4}
+\end{figure}
+
+\begin{figure}[H] %figure5 x0 = 100 b = 50
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{single_run n1000 x0100 b50.png}
+\caption{initial population of 100 and b = 50, it reproduce in the beginning but quickly dies}
+\label{fig:p1s5}
+\end{figure}
+
+\begin{figure}[H] %figure 6 x0 1000 b = 10
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{single_run n1000 x01000 b10.png}
+\caption{initial population of 1000 and b = 10, it show that the population oscillates around 2500}
+\label{fig:p1s6}
+\end{figure}
+
+\begin{figure}[H] %figure 7 x0 1000 b =20
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{single_run n1000 x01000 b20.png}
+\caption{initial population of 1000 and b = 20, the populations starts to get chaotic}
+\label{fig:p1s7}
+\end{figure}
+
+\begin{figure}[H] %figure 8 x0 1000 b =50
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{single_run n1000 x01000 b50.png}
+\caption{initial population of 1000 and b = 500, the populations dies very quick}
+\label{fig:p1s8}
+\end{figure}
+
+
+To further study this model, we run it with $A_{0} = 1000$, n= 1000, b = 1, 2, 3, 4, 5,...,48, 49, 50. and at each b value, use 100 different initial starting condition and plot a phase transition diagram. and we can see that when b = 5-15, the population increases steady and oscillates around a number. When $15<b<35$, the population will get more chaotic and at one time a lot of sites are reproducing, and then the next time steps, they dies because of overcrowding. When $b>35$ the population will dies very quick due to overcrowding. 
+
+
+\begin{figure}[H] %figure 9 phase transition diagram
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{q1_phase_r100.png}
+\caption{initial population of 1000 and b = 500, the populations dies very quick}
+\label{fig:p1q1pd}
+\end{figure}
+
+
+
+
+
+
+
+a simple program in matlab was written to simulate a firing brain with two-dimensional cellular automata model on a N by N grid with periodic boundary conditions.\par
 
 each grid represents a neuron. there are 3 different states for neuron: ready(0), firing(1), and resting(2). 
 the rules for transit to the next time steps are:
 
-\begin{enumerate}
-\item a ready neuron fires on the next time step if there are exactly two neighbours that are firing. ( 0 $\rightarrow$ 1, if two neighbours are 1).
-\item a firing neuron goes to the resting state on the next time step (1 $\rightarrow$ 2).
-\item a firing neuron goes to ready state on the next time step (2 $\rightarrow$ 0).
-\end{enumerate}
+
 
 
 \subsection{simple simulation in matlab}

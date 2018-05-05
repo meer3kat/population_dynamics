@@ -25,4 +25,4 @@ for b = 1:1:50
     lya_exp(b) = (1/t)* sum(lamda);
 end
 
-plot(lya_exp)
+plot([1:1:50],lya_exp)

@@ -17,7 +17,8 @@ t=1/J; %Size of one time step
 
 N=40; 
 %Number of particles
-
+cforce = 0.1; 
+%the force that draw particles together
 e=0.5; 
 %e is eta the noise parameter, whose maximum value is 2*pi
 
@@ -63,8 +64,8 @@ for j=1:1:J %iterate in time
             
             fcenter = atan2(yc-y(i,j),xc-x(i,j));
             %location of center
-            ss = sum(sin(tn)) + sin(fcenter)*0.1;
-            sc = sum(cos(tn)) + cos(fcenter)*0.1;
+            ss = sum(sin(tn)) + sin(fcenter)*cforce;
+            sc = sum(cos(tn)) + cos(fcenter)*cforce;
             
             S = atan2(ss,sc);
             
