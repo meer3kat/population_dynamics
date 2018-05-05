@@ -142,34 +142,7 @@ for j=1:1:J %iterate in time
     
     
     if makemovie
-        for i= 1:1:round(N/2)
-            if abs(x(i,j)-x(i,j+1))<v && abs(y(i,j)-y(i,j+1))<v
-                	plot([x(i,j), x(i,j+1)] ,[y(i,j),y(i,j+1)],'g-','markersize',4) %plots the first half of the particles in black
-                    axis([0 L 0 L]);
-                    hold on
-                    %plot([px(j) px(j+1)],[py(j) py(j+1)],'r-','markersize',4) %plot the predator
-                    plot(x(i,j+1),y(i,j+1),'g.','markersize',10)
-                    %plot(px(j+1),py(j+1),'rd','markersize',10)
-                    xlabel('X position')
-                    ylabel('Y position')
-                    
-            end
-        end
-        
-        for i = round(N/2)+1:1:N
-            if abs(x(i,j)-x(i,j+1))<v && abs(y(i,j)-y(i,j+1))<v
-                	plot([x(i,j), x(i,j+1)] ,[y(i,j),y(i,j+1)],'k-','markersize',4) %plots the first half of the particles in black
-                    axis([0 L 0 L]);
-                    
-                    plot([px(j) px(j+1)],[py(j) py(j+1)],'r-','markersize',4) %plot the predator
-                    plot(x(i,j+1),y(i,j+1),'k.','markersize',10)
-                    plot(px(j+1),py(j+1),'rd','markersize',10)
-                    xlabel('X position')
-                    ylabel('Y position')
-                    
-            end
-        end
-            
+        for 
             
         
     end
@@ -178,7 +151,22 @@ for j=1:1:J %iterate in time
         
  
     
- 
+      for i= 1:1:round(N/2)      
+            if makemovie
+                if abs(x(i,j)-x(i,j+1))<v && abs(y(i,j)-y(i,j+1))<v
+                	plot([x(i,j), x(i,j+1)] ,[y(i,j),y(i,j+1)],'k-','markersize',4) %plots the first half of the particles in black
+                    axis([0 L 0 L]);
+                    hold on
+                    plot([px(j) px(j+1)],[py(j) py(j+1)],'r-','markersize',4) %plot the predator
+                    plot(x(i,j+1),y(i,j+1),'k.','markersize',10)
+                    plot(px(j+1),py(j+1),'rd','markersize',10)
+                    xlabel('X position')
+                    ylabel('Y position')
+                    
+                end
+            end
+      end
+            
     
     %{
     ssin = sum(sin(T(:,j+1)));

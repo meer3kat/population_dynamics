@@ -10,9 +10,7 @@ for i = 1:1:N
         D(i,j) = sqrt((xx(i)-xx(j))^2 + (yy(i) - yy(j))^2);
         D(j,i) = D(i,j);
         
-        if D(i,j) == NaN
-            D(i,j) = 10000;
-        end
+
     end
 end
 
