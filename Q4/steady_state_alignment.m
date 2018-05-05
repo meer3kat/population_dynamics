@@ -8,10 +8,11 @@ movie = 0;
 cf = 0.1;
 erange = 0.1:0.1:6;
 reps = 10;
-yy = 0;
 
-for k = 1:1:N
+
+for k = 1:1:N-1
     k 
+    yy = 0;
     for e = erange
         yy = yy+1;
         steady_a(k,yy) = 0;
@@ -27,6 +28,6 @@ for k = 1:1:N
 end
 
 
-save('ssatry1.mat')
+save('ssatry2.mat')
 
         

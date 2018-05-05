@@ -1,10 +1,18 @@
-function [x,y,op = polarization(J,N,e,L,)
+function [x,y,T,op] = polarization2(J,N,e,L,movie,k,cf)
 %% this function simulate the particle movement
 % J(200) total time steps 200
 % N(40) Number of particles 40 
 % e(0.5) is eta the noise parameter, whose maximum value is 2*pi, 0.5
 % L(10) is the size of the domain on which the particles can move
+% movie(1 or 0) to make movie or not
+% k(4) is the influence neighbours
+% cf is the force effect towards the center of mass
 
+
+%Set up movie
+%fig=figure;
+makemovie = movie;
+%movien = avifile('Vicsekmovie','FPS',3,'compression','none')
 UJ=1;   
 %Rate at which film is updated
 
@@ -28,7 +36,7 @@ y(:,1)=L*rand(N,1); %define initial y coordiantes of all particles
 T=zeros(N,J+1);
 op = [];
 T(:,1)=2*pi*rand(N,1); %define initial direction of all particles
-k = 4;
+
 ssin = sum(sin(T(:,1)));
 scos = sum(cos(T(:,1)));
 op(1) = (1/N) * sqrt(ssin^2 + scos^2);
@@ -38,6 +46,8 @@ for j=1:1:J %iterate in time
     D = distance(x,y,j,N);
     [B,I] = sort(D);
     near_n = I(2:k+1,:); %found our nearest 4 neighbours for each one
+    xc = mean(x(:,j)); %center of mass x
+    yc = mean(y(:,j)); %center of mass y
     
     for i=1:1:N
         
@@ -47,9 +57,13 @@ for j=1:1:J %iterate in time
             for m = 1:1:length(neighbour)
                 tn(m) = T(neighbour(m),j);
             end
+   
             
-            ss = sum(sin(tn));
-            sc = sum(cos(tn));
+            fcenter = atan2(yc-y(i,j),xc-x(i,j));
+            %location of center
+            ss = sum(sin(tn)) + sin(fcenter)*cf;
+            sc = sum(cos(tn)) + cos(fcenter)*cf;
+            
             S = atan2(ss,sc);
                               
             T(i,j+1)=S+e*(rand-0.5); %adds noise to the measured angle
@@ -66,7 +80,7 @@ for j=1:1:J %iterate in time
             %Plot particles
             
             if makemovie
-                if abs(x(i,j)-x(i,j+1))<v & abs(y(i,j)-y(i,j+1))<v
+                if abs(x(i,j)-x(i,j+1))<v && abs(y(i,j)-y(i,j+1))<v
                 	plot([x(i,j), x(i,j+1)] ,[y(i,j),y(i,j+1)],'k-','markersize',4) %plots the first half of the particles in black
                     axis([0 L 0 L]);
                     hold on
@@ -92,7 +106,7 @@ for j=1:1:J %iterate in time
  
 end
 
+%plot([1:1:J+1], op)
      
 %movien = close(movien); %finishes the movie
-
- plot([1:1:J+1], op)
+end
