@@ -1,31 +1,17 @@
-clear
-close all
-
-%Set up movie
-fig=figure;
-makemovie=0;
-%movien = avifile('Vicsekmovie','FPS',3,'compression','none')
-
-J=200; 
-%Number of timestep t0 be used
+function [x,y,op = polarization(J,N,e,L,)
+%% this function simulate the particle movement
+% J(200) total time steps 200
+% N(40) Number of particles 40 
+% e(0.5) is eta the noise parameter, whose maximum value is 2*pi, 0.5
+% L(10) is the size of the domain on which the particles can move
 
 UJ=1;   
 %Rate at which film is updated
 
-
 t=1/J; %Size of one time step
 
-N=40; 
-%Number of particles
 
-e=0.5; 
-%e is eta the noise parameter, whose maximum value is 2*pi
-
-r=1;
-%The radius of influence of a particle
-
-L=10;
-%L is the size of the domain on which the particles can move
+r=1;%The radius of influence of a particle
 
 v=0.5; %v is the speed at which the particles move
 

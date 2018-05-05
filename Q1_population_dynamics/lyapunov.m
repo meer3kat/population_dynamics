@@ -8,7 +8,6 @@ t = 500;%simulate to t = 500
 % if lamda > 0 ,it diverge
 
 
-
 for b = 1:1:50
     b
     x = get_initial(n,x0);
@@ -25,4 +24,12 @@ for b = 1:1:50
     lya_exp(b) = (1/t)* sum(lamda);
 end
 
+
+
+figure2 = figure('position', [0, 0, 700, 500]);
 plot([1:1:50],lya_exp)
+xlim([0 50])
+xlabel('b','FontSize',14)
+ylabel('Lyapunov Exponent','FontSize',14)
+title({'Lyapunov Exponent with different b'}, 'FontSize', 16)
+%saveas(figure2,'lyapunov_exp.png');

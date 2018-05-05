@@ -93,9 +93,9 @@ for j=1:1:J %iterate in time
             
     end
     
-    ssin = sum(sin(T(:,j+1)));
+    ssin = sum(sin(T(:,j+1));
     scos = sum(cos(T(:,j+1)));
-    op(j+1) = (1/N) * sqrt(ssin^2 + scos^2);
+    op(J+1) = (1/N) * sqrt(ssin^2 + scos^2);
     
     if makemovie
         hold off
@@ -109,4 +109,3 @@ end
      
 %movien = close(movien); %finishes the movie
 
- plot([1:1:J+1], op)

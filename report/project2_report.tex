@@ -181,180 +181,125 @@ below are some plots showing the total number of population at different time st
 \end{figure}
 
 
-To further study this model, we run it with $A_{0} = 1000$, n= 1000, b = 1, 2, 3, 4, 5,...,48, 49, 50. and at each b value, use 100 different initial starting condition and plot a phase transition diagram. and we can see that when b = 5-15, the population increases steady and oscillates around a number. When $15<b<35$, the population will get more chaotic and at one time a lot of sites are reproducing, and then the next time steps, they dies because of overcrowding. When $b>35$ the population will dies very quick due to overcrowding. 
+To further study this model, we run it with $A_{0} = 1000$, n= 1000, b = 1, 2, 3, 4, 5,...,48, 49, 50. and at each b value, run the simulation 100 times and plot a phase transition diagram. and we can see that when b = 5-15, the population increases steady and oscillates around a number. When $15<b<35$, the population will get more chaotic and at one time a lot of sites are reproducing, and then the next time steps, they dies because of overcrowding. When $b>35$ the population will dies very quick due to overcrowding. 
 
 
 \begin{figure}[H] %figure 9 phase transition diagram
 \centering
-\includegraphics[width = 12 cm, height = 9cm]{q1_phase_r100.png}
+\includegraphics[width = 16 cm, height = 13cm]{q1_phase_r100.png}
 \caption{initial population of 1000 and b = 500, the populations dies very quick}
 \label{fig:p1q1pd}
 \end{figure}
 
-
-
-
-
-
-
-a simple program in matlab was written to simulate a firing brain with two-dimensional cellular automata model on a N by N grid with periodic boundary conditions.\par
-
-each grid represents a neuron. there are 3 different states for neuron: ready(0), firing(1), and resting(2). 
-the rules for transit to the next time steps are:
-
-
-
-
-\subsection{simple simulation in matlab}
-
-Below are the results for a 40 x 40 grid where initially each cell has a probability of 0.3 being a firing(1) cell and all other neurons are ready. the figures below shows how the cells looks like after 10, 20, 100 and 1000 time steps. 
-
-The initial probability of being in a firing state is 0.3, which means at t = 0, there are around 480 cells that are being in a firing state. as we can see in figure \ref{fig:100sim}, the total number of firing cell decreases over time. In the beginning, the number of cell decreases very fast, and the total number of cells gets stable around t = 300~400. When simulate 100 times to t = 1000, the average firing cell at t = 400 is around 14 and at t = 1000, the average firing cell is around 12. At the equilibrium state, the shapes that remains are travelling forward at a constant rate preserving the same shape either in the same direction(up/down or left/right), or will never interact if there are shape that travel in the up/down direction and others in left/right direction. Over 100 simulation, the curve of average firing cell decreases in an exponential model, and a exponential model of y = a* exp(b*x) + c*exp(d*x) was fitted to the curve in figure \ref{fig:sim_model}.
-
-
-\begin{figure}[H] %figure 1 at t=10
-\centering
-\includegraphics[width = 12 cm, height = 9cm]{fire10.png}
-\caption{40x40 cell grid at t = 10}
-\label{fig:fire10}
-\end{figure}
-
-\begin{figure}[H] %figure 1 at t=20
-\centering
-\includegraphics[width = 12 cm, height = 9cm]{fire20.png}
-\caption{40x40 cell grid at t = 20}
-\label{fig:fire20}
-\end{figure}
-
-\begin{figure}[H] %figure 1 at t=100
-\centering
-\includegraphics[width = 12 cm, height = 9cm]{fire100.png}
-\caption{40x40 cell grid at t = 100}
-\label{fig:fire100}
-\end{figure}
-
-\begin{figure}[H] %figure 1 at t=1000
-\centering
-\includegraphics[width = 12 cm, height = 9cm]{fire1000.png}
-\caption{40x40 cell grid at t = 1000}
-\label{fig:fire1000}
-\end{figure}
-
-\begin{figure}[H] %figure 1 at t=1000
-\centering
-\includegraphics[width = 12 cm, height = 9cm]{firebrain100sim.png}
-\caption{average number of firing cells over time with 100 simulation of different initial conditions}
-\label{fig:100sim}
-\end{figure}
-
-\begin{figure}[H] %model fit
-\centering
-\includegraphics[width = 12 cm, height = 9cm]{sim_model.png}
-\caption{average number of firing cells over time with 100 simulation and exponential model fitting}
-\label{fig:sim_model}
-\end{figure}
-
-and here are the links of video you can check out.\par 
-for simulation to t = 100\par
-\url{<https://youtu.be/CFUcpGHhj00>}\par
-for simulation to t = 1000\par
-\url{<https://youtu.be/8EulLy_IRmw>}\par
-
-%%%%%%%%%%%finish 1.1 %%%%%%%%%%%%
-
-
-%%%%%%%%%% start 1.2%%%%%%%%%%%%%%
-
-\subsection{example of shapes}
-
-\subsubsection{move forward at a rate of one cell per time step, while preserving the same shape}
-\begin{figure}[H] %move forward space ship
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{task2_1.png}
-\caption{shapes that move forward at a rate of one cell per time step preserving the same shape}
-\label{fig:task2_1}
-\end{figure}
-
-\subsubsection{move forward at a rate of one cell per time step, launching other shapes behind them}
-\begin{figure}[H] %launch other shapes
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{task2_2.png}
-\caption{shapes that move forward at a rate of one cell per time step, launching other shapes behind them}
-\label{fig:task2_2}
-\end{figure}
-
-\subsubsection{move forward at a rate of less than one cell per time step, while returning to the same shape after some period}
-\begin{figure}[H] %move slower than 1 cell per time
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{task2_3.png}
-\caption{shapes that move less than one cell per time step, returning to same shape after some period}
-\label{fig:task2_3}
-\end{figure}
-
-\subsubsection{stay stationary but oscillate periodically}
-\begin{figure}[H] %oscillate
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{task2_4.png}
-\caption{shapes that stay stationary but oscillate periodically}
-\label{fig:task2_4}
-\end{figure}
-
-%%%%%%%%%%%%%end of 1.2
-
-\subsection{create cellular automata}
-In this part, I create my own cellular automata. I used the two model in this project (a firing brain and spread of memes), Conway's game of life and several videos I watched online showing cellular automata as reference. I create the following to simulate a population the different life stage.\par
-The states are:
-\begin{itemize}  
-\item Waiting(0)
-\item Growing(1)
-\item Reproducing(2)
-\item Ageing (3)
-\item Dead (4)\\
-\end{itemize}
-
-The rules for the next time steps are:
-\begin{itemize}  
-\item The waiting (0) cell needs at least 2 neighbour that are in the stage of reproducing(2) to be in grow. otherwise, it stays waiting.
-\item The growing (1) cell needs at least 1 neighbour that is in the stage of reproducing(2) and ageing(3) to become a reproducing (2) cell in the next time step. otherwise, it stays growing.
-\item The reproducing(2) celll has the probability of 0.5 to be ageing and 0.5 to remain reproducing
-\item The ageing cell (3)has the probability of 0.5 to be dead and 0.5 to remain ageing.
-\item The dead cell(4) has the the probability of 0.6 to be in waiting in the next time step, and 0.4 remain dead.
-\end{itemize}
-
-To simulate, I set up the initial condition:
-
-\begin{itemize}  
-\item each cell has the probability of 0.05 to be a growing cell(1)
-\item each cell has the probability of 0.05 to be a reproducing cell(2)
-\item each cell has the probability of 0.15 to be in ageing (3)
-\item each cell has the probability of 0.10 to be dead(4)
-\end{itemize}
-
-I created this to simulate life from a society that is dominated by ageing population. The population will cluster together in the beginning and then different shapes will interact with each other.
-
-\begin{figure}[H] %oscillate
-\centering
-\includegraphics[width = 12 cm, height = 9cm]{mycell_automata.png}
-\caption{my cell automata at t = 10}
-\label{fig:myca}
-\end{figure}
-
-and here are the links of video you can check out.\par 
-for simulation to t = 100\par
-\url{<https://youtu.be/gQ4c2FFDzDA>}\par
-for simulation to t = 1000\par
-\url{<https://youtu.be/OWazMF6is1c>}\par
-
-
-
-%%%%%%%leave it as now. 
-%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%2. memes
 \newpage
-\section{Spread of memes}
+\subsection{Mean field model}
+We assume the sites are independent and number of individuals at sites is poisson distributed. 
+I plot selected mean-field model here for b = 5, 10, 15, 20, 35, 50. The model are after the plot
+
+\begin{figure}[H] %figure 10 mean field model
+\centering
+\includegraphics[width = 18 cm, height = 14cm]{meanfield_model.png}
+\caption{mean field model with selected b value}
+\label{fig:p1q1mf}
+\end{figure}
+
+\begin{numcases}{}
+	E(A_{t+1}|A_{t}) = n \times \sum_{k=0}^{n} P_{k} \times \phi_{k} \\
+	\phi_{k} = \begin{cases}
+		b, if k =2\\
+		0, if k \neq 2
+	\end{cases}
+\end{numcases}
+
+
+
+following the mean field model, and the population only reproduce if there are exactly 2 individuals at same site, we can write the following:
+
+\begin{equation}
+	A_{t+1} = n \times P(2 at site, A_{t}) \times b\\
+\end{equation}
+
+\begin{equation}
+	A_{t+1} = n \times \frac{(\frac{A_{t}}{n})^{2} \times e^{-\frac{A_{t}}{n}}} {2} \times b
+\end{equation}
+
+For steady state, we have $A_{t+1} = A_{t}$.\\
+
+\begin{equation}
+	A_{t} = n \times \frac{(\frac{A_{t}}{n})^{2} \times e^{-\frac{A_{t}}{n}}} {2} \times b
+\end{equation}
+
+When $A_{t} = 0$, left hand side always equal to right hand side, they are both 0. When $A_{t}  \neq 0$, we have
+
+\begin{equation} \label{eq1}
+	1 = \frac{b \times A_{t}}{2n} \times e^{-\frac{A_{t}}{n}}
+\end{equation}
+
+Let's rearrange equation (6) and let $\frac{A_{t}}{n} = x $, we have:
+
+\begin{equation}
+	1 = \frac{b}{2} \times x \times e^{-x}
+\end{equation}
+
+\begin{equation}
+	x \times e^{-x} = \frac{b}{2}
+\end{equation}
+
+To find the conditions in terms of b for the existence of two further non-zero steady states, we need to find that $f1(x) = x \times e^{-x}$  has intersection with a horizontal line. b need to fulfill the condition that $\frac{2}{b} < 0.3679$, therefore we get: $b > 5.4366$, as b needs to be integer, we get $b > 5$. 
+
+
+\begin{figure}[H] %figure 11 plot of function
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{q1_2plotfunction.png}
+\caption{plot of f1(x) = x * exp(-x)}
+\label{fig:p1q1plotfun}
+\end{figure}
+
+
+\newpage
+\subsection{Lyapunov exponent}
+
+From the previous section, we have derived the equation for $A_{t}$. that we have 
+\begin{equation}
+	f(A_t) = n \times \frac{(\frac{A_{t}}{n})^{2} \times e^{-\frac{A_{t}}{n}}} {2} \times b
+\end{equation}
+
+\begin{equation}
+	f(a) = \frac{b}{2n} \times a^{2} \times e^{-\frac{a}{n}}
+\end{equation}
+
+\begin{equation}
+	f'(a) = \frac{b}{2n} \times (2a \times e^{-\frac{a}{n}} + a^{2} \times e^{-\frac{a}{n}} \times(- \frac{1}{n}))
+\end{equation}
+
+\begin{equation}
+	f'(a) = \frac{b}{2n} \times (2a \times e^{-\frac{a}{n}} - \frac{a^{2}}{n} \times e^{-\frac{a}{n}} )
+\end{equation}
+
+\begin{equation}
+	|\Delta a_{n}| = |\Delta a_{0}| e^{\lambda n}
+\end{equation}
+
+to compute Lyapunov exponent $\lambda$ numerically, we use the following:
+\begin{equation}
+	\lambda = \frac{1}{n} \sum_{t=0}^{n-1} ln |f'(a_{t})|
+\end{equation}
+
+The Lyapunov exponent are plotted below: we can see that when $\lambda > 0$ the diverges, that's when b is between 21-30, the population become chaotic. When $b \leq 5$ and $b \geq 31$ $\lambda$ is -infinity that means the system converge very fast, and this explains why the population become extinct very fast for large b. 
+
+\begin{figure}[H] %figure 12 lyaponov exponent
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{lyapunov_exp.png}
+\caption{plot of Lyapunov exponent}
+\label{fig:p1q1lya}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%part 2
+%%%%%%%groups of friends
+
+\newpage
+\section{Groups of friends}
 \doublespacing
 In this part, a model is used to simulate the spread of internet memes. There are 3 different states, resting(0), sharing(1) and bored(2). The rules for the next time step are:
 
