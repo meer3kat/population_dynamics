@@ -2,16 +2,12 @@
 \BOOKMARK [2][-]{subsection.1.1}{Matlab model}{section.1}% 2
 \BOOKMARK [2][-]{subsection.1.2}{Mean field model}{section.1}% 3
 \BOOKMARK [2][-]{subsection.1.3}{Lyapunov exponent}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{example of shapes}{section.1}% 5
-\BOOKMARK [3][-]{subsubsection.1.4.1}{move forward at a rate of one cell per time step, while preserving the same shape}{subsection.1.4}% 6
-\BOOKMARK [3][-]{subsubsection.1.4.2}{move forward at a rate of one cell per time step, launching other shapes behind them}{subsection.1.4}% 7
-\BOOKMARK [3][-]{subsubsection.1.4.3}{move forward at a rate of less than one cell per time step, while returning to the same shape after some period}{subsection.1.4}% 8
-\BOOKMARK [3][-]{subsubsection.1.4.4}{stay stationary but oscillate periodically}{subsection.1.4}% 9
-\BOOKMARK [2][-]{subsection.1.5}{create cellular automata}{section.1}% 10
-\BOOKMARK [1][-]{section.2}{Spread of memes}{}% 11
-\BOOKMARK [2][-]{subsection.2.1}{some simulations in matlab}{section.2}% 12
-\BOOKMARK [2][-]{subsection.2.2}{changed the condition of a bored person}{section.2}% 13
-\BOOKMARK [2][-]{subsection.2.3}{simulate on grids of 40x40 for spread of memes}{section.2}% 14
-\BOOKMARK [1][-]{section.3}{Appendix}{}% 15
-\BOOKMARK [2][-]{subsection.3.1}{1firing brain code in matlab}{section.3}% 16
-\BOOKMARK [2][-]{subsection.3.2}{Spread of memes}{section.3}% 17
+\BOOKMARK [1][-]{section.2}{Groups of friends}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{simulations in Matlab}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Master Equation}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Network Epidemics}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{random undirected social network}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{random undirected social network}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Appendix}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{1firing brain code in matlab}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{Spread of memes}{section.4}% 13

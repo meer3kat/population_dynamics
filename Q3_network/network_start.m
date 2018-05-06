@@ -17,10 +17,19 @@ dir = sum(A);
 
 range = 1:1:max(dir);
 histu = hist(dir,range);
-bar(histu)
-%grid on
+nhistu = histu/sum(histu);
+
+figure2 = figure('position', [0, 0, 700, 500]);
+bar(nhistu)
+
+xlabel('Degree of connection','FontSize',14)
+ylabel('Frequency','FontSize',14)
+title({'degree distribution'}, 'FontSize', 16)
+%saveas(figure2,'randomf2.png');
+
+
 
 
 k = (1/n)*sum(dir);
 
-save('try1')
+%save('try1')

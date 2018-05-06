@@ -301,119 +301,100 @@ The Lyapunov exponent are plotted below: we can see that when $\lambda > 0$ the 
 \newpage
 \section{Groups of friends}
 \doublespacing
-In this part, a model is used to simulate the spread of internet memes. There are 3 different states, resting(0), sharing(1) and bored(2). The rules for the next time step are:
+In this part, we used a model to simulate how students make friends. Initially, there are N students, and they are all alone in a group contains only one student. At each time step, a group is picked:
 
 \begin{enumerate}
-\item with probability p = 0.001, a person at rest will discover a new meme and become a sharer.(0 $\rightarrow$ 1 with p = 0.001) 
-\item with probability q = 0.01, a person sharing(1) will pick one person completely at random from the population to share the memes with. if the random person is at rest(0), that person will become a sharer(1), if that person is bored(2), then the sharing person will become bored(2). 
-\item bored(2) stays bored(2) forever. (2 is always 2).
+\item If the picked group contains only one student, this students will join a group with size k with probability of k/N.  
+\item if the picked group size i ($i > 1$), then this group will split up with probability of ri. 
 \end{enumerate}
 
-\subsection{some simulations in matlab}
-The simluation in matlab will run the model 1000 times with a population of 1000 to time at 2000 and show the change of number of resting, sharing and bored person over time. The initial condition is that there are one person sharing and one bored person. and below are the graphs showing the simulation. 
 
-\begin{figure}[H] %1000 meme run >.<
+\subsection{simulations in Matlab}
+First, we simulate the above model with 100 students, r = 0.01 and 100 replications. First, we plot the group size vs frequence on a log log scale. Second, we get the relative frequency with group size histogram taken on a log scale that is we take groups size [1,2,4,8,16,32,64,128] and plot the group size vs relative frequency on a log log plot. in figure \ref{fig:loglog1}, we can observe that the group distribution following the power law. 
+
+
+\begin{figure}[H] %f13 loglog with groupsize 1:1:100
 \centering
-\includegraphics[width = 12 cm, height = 9cm]{memes_sim_1000times.png}
-\caption{simulation of spread of memes showing number of bored, sharing, resting person over time}
-\label{fig:mem}
+\includegraphics[width = 12 cm, height = 9cm]{loglog2.png}
+\caption{log log plot of group size vs frequency}
+\label{fig:loglog2}
 \end{figure}
 
-The mean field difference equation model for the sharing of meme is: \par
-Bored(B), Sharing(S), Resting(R), population(N).\par
-\begin{numcases}{ }
-	B(t+1) = B(t) + S(t)*q*B(t)/N\\
-	S(t+1) = S(t) + p*R(t) - S(t)*q*B(t)/N + S(t)*q*R(t)/N\\
-	R(t+1) = R(t) - R(t)*p - S(t)*q*R(t)/N
-\end{numcases}
-
-The figure below shows both the simulation and the mean field model
-\begin{figure}[H] %1000 meme run >.<
+\begin{figure}[H] %f14 loglog with groupsize 1 2 4 8 16 32
 \centering
-\includegraphics[width = 16 cm, height = 13cm]{memes_withmodel1000.png}
-\caption{simulation of spread of memes showing number of bored, sharing, resting person over time with mean field model}
-\label{fig:meme_sim_model}
+\includegraphics[width = 12 cm, height = 9cm]{loglog1.png}
+\caption{log log plot of group size vs relative frequency}
+\label{fig:loglog1}
 \end{figure}
 
-\begin{figure}[H] %phase transition
+To investigate the how the group size distribution changes with r, we run the model with r from 0.001:0.001:0.1 with 100 replications. In \ref{fig:loglog3}, I choose some r values to plot shows how the group size changes, and in \ref{fig:loglog4}, the whole group distribution is shown on a 3d plot, it might be a little difficult to from the colourful map, but we can observe the z-axis value that the relative frequency of the group. \par
+When r is small at 0.001 we have groups of size 1 and 2 around $\frac{1}{4}$ of the population and some large groups. when we increase the r, then the number of groups of 1 become the dominant group in the distribution and large group appear less and less. With a bigger r, the larger group will split up if it was chosen at time t. For example, setting r = 0.1, it means that groups of size 10 + will slip up at the probability of 1 if chosen at time t. 
+
+\begin{figure}[H] %f15 loglog with r value
 \centering
-\includegraphics[width = 16 cm, height = 13cm]{phasetransition.png}
-\caption{phase transition of total sharing person with simulation with t = 1000 and different B(0) condition}
-\label{fig:meme_phase_transition_1}
+\includegraphics[width = 14 cm, height = 11cm]{logloggr100.png}
+\caption{log log plot of group size vs relative frequency with different r}
+\label{fig:loglog3}
 \end{figure}
 
-\begin{figure}[H] %result plot of individual
+\begin{figure}[H] %f15 loglog with r value
 \centering
-\includegraphics[width = 16 cm, height = 13cm]{indi_phase.png}
-\caption{plot of sharing person in individual runs at t =1000 for 100 simulations of B0 = 1:1:999}
-\label{fig:meme_phase_transition_indi}
+\includegraphics[width = 16 cm, height = 13cm]{hmq2.png}
+\caption{the distribution of groups with different r showing on a 3d plot}
+\label{fig:loglog4}
 \end{figure}
 
-To find the probability of at least 25\% of the populations share a meme. I run the model with B(0) = 1:1:999 for 100 times to final time = 1000. and plot the probability in a heat map. 
 
-\begin{figure}[H] %result plot of individual
+
+
+
+%%%%%%%2.2 master equation
+\newpage
+\subsection{Master Equation}
+
+
+
+%%%%%%%%%%%%
+%%%%%%%%%%%%ATTENTION NEEDS HERE IN THIS PART
+%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%part 3
+%%%%%%%Network Epidemics
+
+\newpage
+\section{Network Epidemics}
+\doublespacing
+
+\subsection{random undirected social network}
+
+An undIrected networking was made with 5000 students and a link density of 0.0016. we use matrix A to represent the network, as the network is undirected, we have A as a symmetric matrix, and with a link density of 0.0016, we generate A and plot the histogram of the degree distribution. The average degree of this network is around 8 and the degree follows a binomial distribution. 
+
+\begin{figure}[H] %f16 frequency of histogram
 \centering
-\includegraphics[width = 16 cm, height = 13cm]{probability250_100sim.png}
-\caption{probability of more than 250 people are sharing with different B0 and time from 0 to 1000}
-\label{fig:probability250}
+\includegraphics[width = 12 cm, height = 9cm]{randomf.png}
+\caption{Frequency of the connection degree}
+\label{fig:randomconnect}
 \end{figure}
 
 \newpage
+\subsection{random undirected social network}
 
 
-%%%%%%%2.2 with different rules on bored 
 
-\subsection{changed the condition of a bored person}
-One condition was added to the bored person. A bored person will pick on person a random from the population with probability of q. If that person is resting then the bored person will become resting. otherwise she will continue to be bored. It was simulated in matlab for 1000 times with a population of 1000 to time = 2000 and at the same time plot together with the mean field model. The results were very different compared to the previous simulation. It seems that the model shows oscillation of bored person and sharing person over time but not in the simulation. In the model, we allow decimals for the number of persons. that's why the number of bored persons can slowly increase. In the simulation, it started with 1 bored person, and if that person meets someone at rest with probability of q. Then this bored person will be resting too. With this condition, a bored person soon finds a person at rest and then bored persons will be 0. The sharing person will increase gradually as a resting person will find a meme with p = 0.001. In the simulation one person can only be in one of the three states, that's why the simulations shows different results. 
 
-\begin{figure}[H] %rmeme2 1000 runs
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{memes2_sim_1000times.png}
-\caption{100 simulations of memes with different rules for bored person over t = 2000  }
-\label{fig:meme2sim1000}
-\end{figure}
 
-\begin{figure}[H] %meme2 1000 runs with model
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{memes2_withmodel1000.png}
-\caption{100 simulations of memes with different rules for bored person over t = 2000  with mean field model plot}
-\label{fig:meme2sim1000model}
-\end{figure}
 
-A phase transtion over q = 0.01:0.01:1 was made for the simulation. it is interesting to see that with probability q a person interact with another either to share or transtion from bored to rest. from q = 0.01 to q = 0.1, the total number of sharing persons at t = 1000 increase rapidly and almost everyone was sharing in the end when p $>$ 0.1. 
-\begin{figure}[H] %meme2 phase
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{phasetransition2.png}
-\caption{phase transition of total sharing person with simulation with t = 1000 and different q condition }
-\label{fig:phasetransition2}
-\end{figure}
 
-\begin{figure}[H] %meme2 phase indi
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{indi_phase2t1000withq.png}
-\caption{plot of sharing person in individual run at t = 1000 }
-\label{fig:phasetransition2indi1000}
-\end{figure}
 
-\subsection{simulate on grids of 40x40 for spread of memes}
-In this part, we use the model above and in 2.2 to simulate that the person can only interact with the neighbours. the boundary conditions are set to be periodic. so that it goes from left to right, right to left, up to bottom, and bottom to up. After several runs. it can be observed that the number of sharer are increasing steadily. while the number of bored people tend to remain around at 1.the only way that bored person increase is that a sharing person meets a bored person. in theory the probability is p = 1* 0.01*(1/1600). For the majority resting population, with a chance of 0.001 to discover a memes and become a sharer. in the initial state, there were 1588 resting people, that means that in theory 1.5 people will become a sharer. That's why it grows very fast, when t gets to 1000. almost everyone is sharing. 
 
-\begin{figure}[H] %meme2 phase indi
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{memegrid.png}
-\caption{initial condition for simulation}
-\label{fig:memegrid0}
-\end{figure}
 
-\begin{figure}[H] %meme2 phase indi
-\centering
-\includegraphics[width = 16 cm, height = 13cm]{memegrid100.png}
-\caption{simulation of spread of meme to t = 100}
-\label{fig:memegrid100}
-\end{figure}
 
-The video of the simulation can be found at 
-\url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%
