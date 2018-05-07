@@ -77,7 +77,7 @@ grid on
 %y_hat = exp(p(1) * log(hrange) + p(2));
 %loglog(hrange, y_hat,'r')
 xlabel('Group size','FontSize',14)
-set(gca, 'XTick', [hrange 100])
+set(gca, 'XTick', [hr])
 %set(gca, 'YTick', [0.0001 0.001 0.01 0.1 0.25 0.5 1])
 ylabel('Frequency','FontSize',14)
 title({'log log plot of group size vs frequency'}, 'FontSize', 16)

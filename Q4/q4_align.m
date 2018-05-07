@@ -108,5 +108,11 @@ end
 
      
 %movien = close(movien); %finishes the movie
+figure2 = figure('position', [0, 0, 700, 500]);
+plot([1:1:J+1], op)
+xlim([0 200]);
+xlabel('Time','FontSize',14)
+ylabel('Polarisation','FontSize',14)
+title({'Alignment';'n = 4'}, 'FontSize', 16)
+saveas(figure2,'palign.png');
 
- plot([1:1:J+1], op)

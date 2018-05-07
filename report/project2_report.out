@@ -7,7 +7,13 @@
 \BOOKMARK [2][-]{subsection.2.2}{Master Equation}{section.2}% 7
 \BOOKMARK [1][-]{section.3}{Network Epidemics}{}% 8
 \BOOKMARK [2][-]{subsection.3.1}{random undirected social network}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.2}{random undirected social network}{section.3}% 10
-\BOOKMARK [1][-]{section.4}{Appendix}{}% 11
-\BOOKMARK [2][-]{subsection.4.1}{1firing brain code in matlab}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.2}{Spread of memes}{section.4}% 13
+\BOOKMARK [2][-]{subsection.3.2}{Infection within the random network}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Infection within the random network}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{Master Equation}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.5}{infection with the preferential attachment network}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Flocks and Predators}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Alignment}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Add a small force }{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Appendix}{}% 17
+\BOOKMARK [2][-]{subsection.5.1}{1firing brain code in matlab}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.2}{Spread of memes}{section.5}% 19

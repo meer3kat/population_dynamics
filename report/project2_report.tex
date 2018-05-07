@@ -369,7 +369,7 @@ When r is small at 0.001 we have groups of size 1 and 2 around $\frac{1}{4}$ of 
 
 \subsection{random undirected social network}
 
-An undIrected networking was made with 5000 students and a link density of 0.0016. we use matrix A to represent the network, as the network is undirected, we have A as a symmetric matrix, and with a link density of 0.0016, we generate A and plot the histogram of the degree distribution. The average degree of this network is around 8 and the degree follows a binomial distribution. 
+An undirected networking was made with 5000 students and a link density of 0.0016. we use matrix A to represent the network, as the network is undirected, we have A as a symmetric matrix, and with a link density of 0.0016, we generate A and plot the histogram of the degree distribution. The average degree of this network is around 8 and the degree follows a binomial distribution. 
 
 \begin{figure}[H] %f16 frequency of histogram
 \centering
@@ -379,19 +379,144 @@ An undIrected networking was made with 5000 students and a link density of 0.001
 \end{figure}
 
 \newpage
-\subsection{random undirected social network}
+\subsection{Infection within the random network}
+
+A infection on above random network was modelled. In the beginning, there are 100 random infected students. The infection will spread according to:
+
+\begin{enumerate}
+\item An uninfected student will get infected depends on the infected student he is connected with. $P_{infected}(n) = 1 - e^{-pn}$.  
+\item An infected student will recover with the probability of r = 0.03.
+\item A recovered student can get infected again. 
+\end{enumerate}
+
+To study the model, we set p = 0.01 and plot the number of infected students over time and it showed that the infection spreads very quick. At around 200 time, the total number of infected students are around 3000, and it stays stable around that number, which is more than half of the population. To further investigate, we run the model with p = 0.001:0.001:0.01, and the infection does not spread for $p \leq 0.003$, the infection will stay around the initial number when p = 0.004, and the infection will spread when $p \geq 0.005$, and the larger the p, the faster the spread of the infection and more infected students. \par
+
+Finally, in Figure \ref{fig:infectprp} we can see than the infection will die when $r/p \geq 10$ and spread very fast when $r/p \leq 5$.
+
+\begin{figure}[H] %f17 p0.01
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{infectp001.png}
+\caption{Number of infected individuals against time with p = 0.01}
+\label{fig:infectp001}
+\end{figure}
+
+\begin{figure}[H] %f18  10 runs with different p
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{infectp10r.png}
+\caption{Number of infected individuals against time with different p}
+\label{fig:infectp10r}
+\end{figure}
+
+\begin{figure}[H] %f19 frequency of histogram
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{infectprp.png}
+\caption{Number of infected individuals vs. r/p}
+\label{fig:infectprp}
+\end{figure}
+
+
+
+\newpage
+\subsection{Infection within the random network}
+
+In this part, we create a network with preferential attachment, starting at $t_{0}$, there are 2 students that are linked. Each time step, one new student is added to the network and he will chose to connect with a students at $p = \frac{k_{i}}{2(n-2)}$. 
+
+First, we can see that in Figure \ref{fig:degreehist}, the connection degree distribution follows the power law distribution. The average degree of the network is around 2. But to have a better idea, we take histogram at interval of $2^{i}$. And in Figure \ref{fig:degreeloglog}, it eliminates the random noise, and shows a strong power law distribution for the preferential network.
+
+\begin{figure}[H] %loglog plot for degree
+\centering
+\includegraphics[width = 14 cm, height = 11cm]{p_nw2.png}
+\caption{Histogram of the degree distribution }
+\label{fig:degreehist}
+\end{figure}
+
+\begin{figure}[H] %loglog plot for degree
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{p_nw.png}
+\caption{loglog plot of degree of connection}
+\label{fig:degreeloglog}
+\end{figure}
+
+
+%%%%%%%3.4 master equation
+\newpage
+\subsection{Master Equation}
+
+
+
+%%%%%%%%%%%%
+%%%%%%%%%%%%ATTENTION NEEDS HERE IN THIS PART
+%%%%%%%%%%%%%%%
 
 
 
 
+%%%%%%%3.5 infection
+\newpage
+\subsection{infection with the preferential attachment network}
+
+Here, the infection in 3.2 are simulated in the preferential network created in 3.3. We can see in Figure \ref{fig:pnwinf} that the number of infection will die when $p \leq 0.005$, the infected number will stay around the initial number or decrease a little when p is between 0.006 to 0.008, the infection will spread when $p \geq 0.009$. \par
+
+The total number of infected students are less with same p in the preferential network compared to the random network as the average degree of network is lower at the preferential network. The infection are more difficult to spread in the preferential network than the random network. If a student with a lot of connections are infected then the infection will likely spread. But in a network with high r/p, the infected ones may recover sooner than spreading it to other students. \par
+
+Using the spread of internet memes within the preferential network. the constant p here can be seen as how funny the memes is. If the memes is very funny, then the student will be very likely to hear from another students, thus become infected with the memes and spread it, if a key student with lots of connections become infected with the meme, the memes will take off and become viral. However we have a r = 0.03 recovery rate, can be seen as lost interest. While some students are sharing memes, some other students lost interests on the memes. When r/p > 6, the memes are not likely to get spread out. When r/p are smaller than 4, the number of students that are interested in the memes are likely to remain the same as the initial number. If the r/p are decreased slightly under 4, the memes is likely to take off spreading very rapidly. However, this depends on the preferential network A. With the same rule in 3.3, sometimes the network can have key students with a large number of connections (100+), sometimes, the network does not have these big key student. It is suggested to run the model with different network A generated using the same methods in 3.3 to further investigate the preferential attachment network.  
+
+
+\begin{figure}[H] %loglog plot for degree
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{pnwinf.png}
+\caption{Number of infected individuals against time with different p}
+\label{fig:pnwinf}
+\end{figure}
+
+\begin{figure}[H] %loglog plot for degree
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{pnwprp.png}
+\caption{Number of infected individuals against time with different p}
+\label{fig:pnwprp}
+\end{figure}
 
 
 
 
+%%%%%%%%%%%%%%%%%part 4
+\newpage
+\section{Flocks and Predators}
+\doublespacing
+
+\subsection{Alignment}
+
+Run the Vicsek alignment model with 40 particles, domain size L = 10, angular noise e = 0.5, for 200 time steps, at each time, the direction of a particle is the average direction of its 4 nearest neighbours. The alignment varies from individual runs of the model, but generally, the particles all move towards the same direction very quick.
+
+\begin{figure}[H] %Alignment
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{palign.png}
+\caption{Alignment (4 nearest neighbour)}
+\label{fig:align}
+\end{figure}
 
 
 
+\subsection{Add a small force }
 
+We add a small force that pulls the particles toward the center of mass. with coefficient 0.1. and we run the model with 40 particles, domain size L = 10, angular noise e = 0.1:0.1:6, nearest neighbour (n) = 1: 1:39 for 200 time steps with 10 replication. Then take average of the last half of the alignment. we get the heat map showing the steady-state alignment change with n and e.
+\begin{figure}[H] %heatmap
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{heatmap.png}
+\caption{Heat map of steady state alignment}
+\label{fig:hm}
+\end{figure}
+
+
+\subsection{Predator}
+
+We add a small force that pulls the particles toward the center of mass. with coefficient 0.1. and we run the model with 40 particles, domain size L = 10, angular noise e = 0.1:0.1:6, nearest neighbour (n) = 1: 1:39 for 200 time steps with 10 replication. Then take average of the last half of the alignment. we get the heat map showing the steady-state alignment change with n and e.
+\begin{figure}[H] %heatmap
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{heatmap.png}
+\caption{Heat map of steady state alignment}
+\label{fig:hm}
+\end{figure}
 
 
 

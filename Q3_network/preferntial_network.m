@@ -1,5 +1,5 @@
 clear all
-
+close all
 n = 5000; 
 %{
 s = randperm(n,2);
@@ -37,7 +37,7 @@ loglog(histu);
 
 %average degreee of network
 
-ave_degree = (1/(n*n))*sum(sum(A));
+ave_degree = (1/(n))*sum(sum(A));
     
     
     

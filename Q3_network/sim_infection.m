@@ -42,4 +42,8 @@ for pe = ps
     end
 
 end
+
+
+save('resultp10run')
+    
 plot(y)
