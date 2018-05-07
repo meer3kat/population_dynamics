@@ -1,6 +1,5 @@
-clear
-close all
-%function [x,y,T,op] = hunting(J,N,e,L,movie,k1,k2,cf)
+
+function [x,y,T,op,s1,s2] = test43_hunt(J,N,e,L,movie,k1,k2,cf)
 %% this function simulate the particle movement
 % J(200) total time steps 200
 % N(40) Number of particles 40 
@@ -10,14 +9,17 @@ close all
 % k1 is the influence neighbours for the first group
 % k2 is the influence neighbours for the second group
 % cf is the force effect towards the center of mass
-J=200;N=40;e=0.5;L=10;movie=1;k1=10;k2=3;cf=0;
+%J=200;N=40;e=0.5;L=10;movie=1;k1=10;k2=3;cf=0;
 %Set up movie
-fig=figure;
+
+figure('position', [0, 0, 700, 600])
 makemovie = movie;
-myv = VideoWriter('hunting.avi');
+if makemovie == 1
+myv = VideoWriter('hunting5.avi');
 myv.FrameRate = 10;
 open(myv);
 set(gca,'nextplot','replacechildren'); 
+end
 
 
 %movien = avifile('Vicsekmovie','FPS',3,'compression','none')
@@ -26,11 +28,11 @@ UJ=1;
 
 t=1/J; %Size of one time step
 
-r=1;%The radius of eating
+r=0.5;%The radius of eating
 fast = 1.2;
 
 v=0.5; %v is the speed at which the particles move
-vp = 0.5 * fast;
+vp = v * fast;
 
 % x(i,j) gives the x coordinate of the ith particle at time j
 x=zeros(N,J+1);
@@ -60,8 +62,8 @@ for j=1:1:J %iterate in time
     %For each particle
     D = distance(x,y,j,N);
     [B,I] = sort(D);
-    big_n = I(2:k1+1,:); %found our nearest 4 neighbours for each one
-    small_n = I(2:k2+1,:); %found our nearest 4 neighbours for each one
+    big_n = I(2:k1+1,:); %found our nearest 10 neighbours for each one
+    small_n = I(2:k2+1,:); %found our nearest 3 neighbours for each one
     xc = nanmean(x(:,j)); %center of mass x
     yc = nanmean(y(:,j)); %center of mass y
     
@@ -103,7 +105,7 @@ for j=1:1:J %iterate in time
     
     
     for i=round(N/2)+1:1:N
-        %the group that depends on larger number of neighbours
+        %the group that depends on small number of neighbours
         
             %get the current distance vector  
             neighbour = small_n(:,i);
@@ -156,9 +158,11 @@ for j=1:1:J %iterate in time
                     %plot([px(j) px(j+1)],[py(j) py(j+1)],'r-','markersize',4) %plot the predator
                     plot(x(i,j+1),y(i,j+1),'g.','markersize',10)
                     %plot(px(j+1),py(j+1),'rd','markersize',10)
+                    xlim([0 L])
+                    ylim([0 L])
                     xlabel('X position')
                     ylabel('Y position')
-                    title({'hunting game';'Green: movement depends on large number of neighbours';
+                    title({'hunting game';'Green: movement depends on 10 neighbours';'Black: movement depends on 3 neighbours';'Red:Predator'},'FontSize',16);
                     
             end
         end
@@ -171,23 +175,26 @@ for j=1:1:J %iterate in time
                     plot([px(j) px(j+1)],[py(j) py(j+1)],'r-','markersize',4) %plot the predator
                     plot(x(i,j+1),y(i,j+1),'k.','markersize',10)
                     plot(px(j+1),py(j+1),'rd','markersize',10)
+                    xlim([0 L])
+                    ylim([0 L])
                     xlabel('X position')
                     ylabel('Y position')
-                    
+                    title({'hunting game';'Green: movement depends on 10 neighbours';'Black: movement depends on 3 neighbours';'Red:Predator'},'FontSize',16);
             end
         end
             
             
         
     end
-
-    writeVideo(myv,getframe(gca));
+    
     %{
     ssin = sum(sin(T(:,j+1)));
     scos = sum(cos(T(:,j+1)));
     op(j+1) = (1/N) * sqrt(ssin^2 + scos^2);
     %}
     if makemovie
+        frame = getframe(gcf);
+        writeVideo(myv,frame);
 
         hold off
         %pause(0.1)
@@ -201,6 +208,17 @@ for j=1:1:J %iterate in time
 
 end
 
-     
+if makemovie ==1     
 close(myv); %finishes the movie
+end
+
+for t = 1:1:J
+
+    
+    s1(t) = N/2 - sum(isnan(x(1:round(N/2),t)));
+    s2(t) = N/2 - sum(isnan(x(round(N/2)+1:end,t)));
+    
+end
+
+end
 

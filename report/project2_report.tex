@@ -352,7 +352,12 @@ When r is small at 0.001 we have groups of size 1 and 2 around $\frac{1}{4}$ of 
 \newpage
 \subsection{Master Equation}
 
-
+\begin{figure}[H] %f16 frequency of histogram
+\centering
+\includegraphics[width = 12 cm, height = 9cm]{memes.jpg}
+\caption{my master equation}
+\label{fig:meme}
+\end{figure}
 
 %%%%%%%%%%%%
 %%%%%%%%%%%%ATTENTION NEEDS HERE IN THIS PART
@@ -442,12 +447,67 @@ First, we can see that in Figure \ref{fig:degreehist}, the connection degree dis
 \newpage
 \subsection{Master Equation}
 
+Below, I show my work for master equation. 
+
+\begin{figure}[H] %loglog plot for degree
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{dange.jpg}
+\caption{master equation for the preferential network}
+\label{fig:me3_4}
+\end{figure}
+
+\newpage
+
+For the preferential network, we have the number of students n and time t, and at each time the probability of student with k links will get an extra link is $p_{k,n} = \frac{k}{2(n-2)}$. \par
+
+Expected number of student with k links are:
+
+\begin{equation}
+	E = \frac{k}{2(n-2)} \times p_{k,n} \times n
+\end{equation}
 
 
-%%%%%%%%%%%%
-%%%%%%%%%%%%ATTENTION NEEDS HERE IN THIS PART
-%%%%%%%%%%%%%%%
+\begin{equation}
+	(n+1)\times p_{k,n+1} = n \times p_{k,n} + \frac{k-1}{2(n-2)} \times p_{k-1,n} \times n - \frac{k}{2(n-2)} \times p_{k,n} \times n
+\end{equation}
 
+to find steady state, we set n and t to $\infty$. we get:
+
+\begin{equation}
+	(n+1)\times p_{k} = n \times p_{k} + \frac{k-1}{2} \times p_{k-1} - \frac{k}{2} \times p_{k,n}
+\end{equation}
+
+\begin{equation}
+	p_{k} = \frac{1}{2} \times ((k-1)\times p_{k-1} - k \times p_{k})
+\end{equation}
+
+\begin{equation}
+	p_{k} = \frac{(k-1)!}{(k+2)(k+1)(k)...4} \times p_{1} 
+\end{equation}
+
+when k = 1:
+\begin{equation}
+	p_{1} = 1 - \frac{1}{2} \times p_{1}
+\end{equation}
+
+\begin{equation}
+	p_{1}  = \frac{2}{3}
+\end{equation}
+
+\begin{equation}
+	p_{k} = \frac{(k-1)!}{(k+2)(k+1)(k)...4} \times \frac{2}{3} = \frac{4}{(k+2)(k+1)(k)}
+\end{equation}
+
+Then we got our result c = 4. 
+
+\begin{figure}[H] %loglog plot for degree
+\centering
+\includegraphics[width = 16 cm, height = 13cm]{p_nw34.png}
+\caption{distribution of the connection from the network and master equation}
+\label{fig:plot3_4}
+\end{figure}
+
+The master equation aligns with the results from the network. 
 
 
 
@@ -510,15 +570,29 @@ We add a small force that pulls the particles toward the center of mass. with co
 
 \subsection{Predator}
 
-We add a small force that pulls the particles toward the center of mass. with coefficient 0.1. and we run the model with 40 particles, domain size L = 10, angular noise e = 0.1:0.1:6, nearest neighbour (n) = 1: 1:39 for 200 time steps with 10 replication. Then take average of the last half of the alignment. we get the heat map showing the steady-state alignment change with n and e.
-\begin{figure}[H] %heatmap
+In this part, we will assign the particles to different settings. The 40 particles are divided into two groups, the first half of the group will move with direction based on large number of neighbours(k1), and the second half of the group will move with direction based on small number of neighbours(k2). The predator is attracted tot he centre of mass by his very accurate sensor and he will move to the centre of mass of the particles at a speed of 1.2 times the speed of the particles and it has a eating range of 0.5. Now we simulate this with different k1 and k2 and show the remaining number of particles at different times. 
+
+\begin{figure}[H] %%%%%%%%change the picture here if necessary%%%%%%%%
 \centering
-\includegraphics[width = 16 cm, height = 13cm]{heatmap.png}
-\caption{Heat map of steady state alignment}
-\label{fig:hm}
+\includegraphics[width = 16 cm, height = 13cm]{hunt.png}
+\caption{number of survivors with different neighbours influence the direction}
+\label{fig:huntpic}
 \end{figure}
 
+Unfortunately, there is no obvious clue that whether with a large n or small n will increase the survival rate. It depends on the initial location of particles, in the simulation, the particles and predator are all set to random location, and they all move at around the same speed, only the changing direction at each time step. Sometimes, the group with large n will be eaten faster, and sometimes the other way. There are more to do to simulate it 
 
+
+Here are the videos you can watch:
+
+
+
+\begin{enumerate} %%%%%% insert video links below!!!
+\item Hunting1 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
+\item Hunting2 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
+\item Hunting3 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
+\item Hunting4 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
+\item Hunting5 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
+\end{enumerate}
 
 
 %%%%%%%%%%%%%%%%%%
