@@ -352,16 +352,53 @@ When r is small at 0.001 we have groups of size 1 and 2 around $\frac{1}{4}$ of 
 \newpage
 \subsection{Master Equation}
 
+For $k > 1$: we have $\pi(k, t+1)$ = $\pi(k, t)$ + (k-1)group get a new one - (k) group get a new one become (k+1)group - (k) group split. 
+then we get 
+\begin{equation}
+	\pi (k, t+1) = \pi (k,t) + \pi(1,t) \times \frac{k-1}{N} \times \pi(k-1, t) - \pi(1,t) \times \frac{k}{N} \times \pi (k,t) - \pi(k,t) \times (kr)
+\end{equation}
+
+For k = 1:
+\begin{equation}
+	\pi (1, t+1) = \pi (1,t) -  \pi(1,t) \times \frac{1}{N} + \sum_{j =2}^{n}\pi (j, n) \times j^{2} \times r
+\end{equation}
+
+\begin{equation}
+	\pi (1, t+1) = \pi (1,t) + \sum_{j =2}^{n}\pi (j, n) \times j^{2} \times r
+\end{equation}
+
+when $k>1$, at steady state, we have $\pi(k,t+1) = \pi(k,t)$.
+
+\begin{equation}
+	\pi (1) \times \frac{k-1}{N} \times \pi (k-1) = \pi (k) \times (kr + \pi (1) \times \frac{k}{N})
+\end{equation}
+
+\begin{equation}
+	\pi (k) = \frac{k-1}{Nkr + \pi(1)k} \times \pi (1)  \times \pi (k-1)
+\end{equation}
+
+now we find c:
+\begin{equation}
+	c = \frac{\pi(1)}{Nr + \pi(1)} 
+\end{equation}
+
+\begin{equation}
+	\pi(k) = \frac{c^{k} \times \pi(1)}{2k} 
+\end{equation}
+
+\begin{equation}
+	K = \frac{\pi (1)}{c} 
+\end{equation}
+
+from the model, we find $\pi = 0.6143$. and we get $c = \frac{0.6143}{100*0.01 + 0.6143} = 0.3805$. and $K = 1.6145$. Overall, it fits, but there are more groups with size 2-10 appear in the model than from master equation.
+
+
 \begin{figure}[H] %f16 frequency of histogram
 \centering
-\includegraphics[width = 12 cm, height = 9cm]{memes.jpg}
-\caption{my master equation}
-\label{fig:meme}
+\includegraphics[width = 12 cm, height = 9cm]{me1.png}
+\caption{comparion of the distribution from simulation to master equation}
+\label{fig:mecompare}
 \end{figure}
-
-%%%%%%%%%%%%
-%%%%%%%%%%%%ATTENTION NEEDS HERE IN THIS PART
-%%%%%%%%%%%%%%%
 
 
 
@@ -570,29 +607,31 @@ We add a small force that pulls the particles toward the center of mass. with co
 
 \subsection{Predator}
 
-In this part, we will assign the particles to different settings. The 40 particles are divided into two groups, the first half of the group will move with direction based on large number of neighbours(k1), and the second half of the group will move with direction based on small number of neighbours(k2). The predator is attracted tot he centre of mass by his very accurate sensor and he will move to the centre of mass of the particles at a speed of 1.2 times the speed of the particles and it has a eating range of 0.5. Now we simulate this with different k1 and k2 and show the remaining number of particles at different times. 
+In this part, we will assign the particles to different settings. The 40 particles are divided into two groups, the first half of the group will move with direction based on large number of neighbours(k1), and the second half of the group will move with direction based on small number of neighbours(k2). The predator is attracted tot he centre of mass by his very accurate sensor and he will move to the centre of mass of the particles at a speed of 1.2 times the speed of the particles and it has a eating range of 0.5. Now we simulate this with different k1 and k2 and show the remaining number of particles at different times. \par
+
+Unfortunately, there is no obvious clue that whether with a large n or small n will increase the survival rate. It depends on the initial location of particles, in the simulation, the particles and predator are all set to random location, and they all move at around the same speed. We only change the direction at each time step. Sometimes, the group with large n will be eaten faster, and sometimes the other way, depends on the initial location. There are more to do to simulate it to get a more realistic model, for example changing the speed of the particles, their reaction to predator, and predator's reaction to the particles, different initial locations, etc. In all, for my hunting model, there seems to be too much randomness in it, and the predator will move to the centre of the mass. There is no obvious strategy that can increase the survival. So it seems to be good just with a random walk strategy. \par
+
 
 \begin{figure}[H] %%%%%%%%change the picture here if necessary%%%%%%%%
 \centering
-\includegraphics[width = 16 cm, height = 13cm]{hunt.png}
+\includegraphics[width = 16 cm, height = 20cm]{hunt.png}
 \caption{number of survivors with different neighbours influence the direction}
 \label{fig:huntpic}
 \end{figure}
 
-Unfortunately, there is no obvious clue that whether with a large n or small n will increase the survival rate. It depends on the initial location of particles, in the simulation, the particles and predator are all set to random location, and they all move at around the same speed, only the changing direction at each time step. Sometimes, the group with large n will be eaten faster, and sometimes the other way. There are more to do to simulate it 
 
 
-Here are the videos you can watch:
-
-
+Here are the videos you can watch for fun:
 
 \begin{enumerate} %%%%%% insert video links below!!!
-\item Hunting1 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
-\item Hunting2 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
-\item Hunting3 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
-\item Hunting4 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
-\item Hunting5 \url{<https://www.youtube.com/watch?v=WMfI2P52ros>}
+\item Hunting1 \url{<https://youtu.be/H3jBpG4da4s}
+\item Hunting2 \url{<https://youtu.be/i7qd-9QbBCE>}
+\item Hunting3 \url{<https://youtu.be/1Fe-Ej9SFXk>}
+\item Hunting4 \url{<https://youtu.be/E3WqrBnrxUQ>}
+\item Hunting5 \url{<https://youtu.be/0Oas2_Q7ef8>}
 \end{enumerate}
+
+
 
 
 %%%%%%%%%%%%%%%%%%
@@ -601,48 +640,111 @@ Here are the videos you can watch:
 \newpage
 \section{Appendix}
 
-\subsection{1firing brain code in matlab}
+\subsection{Population Dynamics}
 \singlespacing
 \begin{itemize}
-\item {\large simulate single time of fire brain}
-\lstinputlisting{firebrain1.m}
+
+\item {\large sim population}
+\lstinputlisting{sim_population.m}
 \vspace{1cm}
 
-\item {\large transition function}
-\lstinputlisting{transit.m}
+\item {\large get initial}
+\lstinputlisting{get_initial.m}
 \vspace{1cm}
 
-\item {\large initial state}
-\lstinputlisting{random_start.m}
+\item {\large next generation}
+\lstinputlisting{next_generation.m}
 \vspace{1cm}
 
-\item {\large simulate 100 times of firing brain}
-\lstinputlisting{firebrain1_simulate100.m}
+\item {\large mean field model}
+\lstinputlisting{q1_mean_field_model.m}
 \vspace{1cm}
 
-\item {\large cell that move forward at one cell per time preserving the same shape}
-\lstinputlisting{task2_1.m}
+\item {\large phase transition}
+\lstinputlisting{q1_phase_transition.m}
 \vspace{1cm}
 
-\item {\large cell that move forwad at one cell per time, launching other shapes behind them}
-\lstinputlisting{task2_2a.m}
+\item {\large dfda}
+\lstinputlisting{dfda.m}
 \vspace{1cm}
 
-\item {\large move forward at a rate of less than one cell per time step}
-\lstinputlisting{task2_3.m}
+\item {\large lyapunov}
+\lstinputlisting{lyapunov.m}
 \vspace{1cm}
 
-\item {\large oscillate shape}
-\lstinputlisting{task2_4.m}
+\end{itemize}
+
+
+
+\subsection{Groups of friends}
+
+\singlespacing
+\begin{itemize}
+
+\item{\large join group}
+\lstinputlisting{join_group.m}
+\vspace{1cm}
+
+\item{\large split group}
+\lstinputlisting{split_group.m}
+\vspace{1cm}
+
+\item{\large sim friends}
+\lstinputlisting{sim_friends.m}
+\vspace{1cm}
+
+\item{\large sim friends with replication}
+\lstinputlisting{sim_friends_reps.m}
 \vspace{1cm}
 
 
-\item {\large my cellular automata}
-\lstinputlisting{reproduceown.m}
+\item{\large sim friends with different r }
+\lstinputlisting{sim_friends_different_r.m}
 \vspace{1cm}
 
-\item {\large my cellular automata transit}
-\lstinputlisting{transitown.m}
+\end{itemize}
+
+
+
+\subsection{Network Epidemics}
+
+\singlespacing
+\begin{itemize}
+
+\item{\large random network}
+\lstinputlisting{network_start.m}
+\vspace{1cm}
+
+\item{\large infection transit}
+\lstinputlisting{infection_transit.m}
+\vspace{1cm}
+
+\item{\large probability vector}
+\lstinputlisting{probability_vector.m}
+\vspace{1cm}
+
+
+\item{\large sim infection}
+\lstinputlisting{sim_infection.m}
+\vspace{1cm}
+
+\item{\large preferential network}
+\lstinputlisting{p_network.m}
+\vspace{1cm}
+
+
+\item{\large preferential network}
+\lstinputlisting{preferntial_network.m}
+\vspace{1cm}
+
+
+\item{\large preferential infection}
+\lstinputlisting{preferntial_infection_5.m}
+\vspace{1cm}
+
+
+\item{\large full simulation for preferential network}
+\lstinputlisting{large_sim_P.m}
 \vspace{1cm}
 
 
@@ -650,59 +752,63 @@ Here are the videos you can watch:
 
 
 
-\subsection{Spread of memes}
+
+\subsection{Flocks and Predators}
 
 \singlespacing
 \begin{itemize}
 
-\item{\large simulation of spread of memes}
-\lstinputlisting{sim_meme1.m}
+\item{\large distance}
+\lstinputlisting{distance.m}
 \vspace{1cm}
 
-\item{\large run single spread of memes }
-\lstinputlisting{runmeme.m}
+\item{\large distance to predator}
+\lstinputlisting{distance_predator.m}
 \vspace{1cm}
 
-\item{\large mean field model}
-\lstinputlisting{sim_meme_model.m}
-\vspace{1cm}
-
-\item{\large phase transition}
-\lstinputlisting{sim_meme_phase.m}
+\item{\large alignment}
+\lstinputlisting{q4_align.m}
 \vspace{1cm}
 
 
-\item{\large probability for at least 25\% are sharing}
-\lstinputlisting{plargethan250.m}
+\item{\large with small force}
+\lstinputlisting{q4_align_addforce.m}
+\vspace{1cm}
+
+\item{\large polarization}
+\lstinputlisting{polarization.m}
 \vspace{1cm}
 
 
-\item{\large simulation of spread of memes with new rules}
-\lstinputlisting{sim_meme2.m}
+\item{\large steady state alignment}
+\lstinputlisting{steady_state_alignment.m}
 \vspace{1cm}
 
-\item{\large run single spread of memes }
-\lstinputlisting{runmeme_newbored.m}
+
+\item{\large hunting function}
+\lstinputlisting{test43_hunt.m}
 \vspace{1cm}
 
-\item{\large mean field model}
-\lstinputlisting{sim_meme_model2.m}
-\vspace{1cm}
 
-\item{\large phase transition for new rules}
-\lstinputlisting{sim_meme_phase2.m}
-\vspace{1cm}
-
-\item{\large lattice simulation for memes}
-\lstinputlisting{memegrid.m}
-\vspace{1cm}
-
-\item{\large transition function for memes}
-\lstinputlisting{transit_meme.m}
+\item{\large add predator}
+\lstinputlisting{q4_3.m}
 \vspace{1cm}
 
 
 \end{itemize}
+
+
+
+
+
+
+
 
 
 \end{document}
+
+
+
+
+
+
